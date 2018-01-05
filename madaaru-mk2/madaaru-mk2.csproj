@@ -30,6 +30,54 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="madaaru-mk2Page.xaml" />
+    <EmbeddedResource Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceShopPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualInputBoughtThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtThingResultEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtThingConcernPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompleteBoughtThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyThingListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoiceFromBoughtThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanBuyThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualInputBuyThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConcernBuyThingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -39,6 +87,42 @@
       <DependentUpon>madaaru-mk2Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtListPage.xaml.cs">
+      <DependentUpon>BoughtListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceShopPage.xaml.cs">
+      <DependentUpon>ChoiceShopPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManualInputBoughtThingPage.xaml.cs">
+      <DependentUpon>ManualInputBoughtThingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtThingResultEditPage.xaml.cs">
+      <DependentUpon>BoughtThingResultEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtThingConcernPage.xaml.cs">
+      <DependentUpon>BoughtThingConcernPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteBoughtThingPage.xaml.cs">
+      <DependentUpon>CompleteBoughtThingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuyThingListPage.xaml.cs">
+      <DependentUpon>BuyThingListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceFromBoughtThingPage.xaml.cs">
+      <DependentUpon>ChoiceFromBoughtThingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScanBuyThingPage.xaml.cs">
+      <DependentUpon>ScanBuyThingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManualInputBuyThingPage.xaml.cs">
+      <DependentUpon>ManualInputBuyThingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConcernBuyThingPage.xaml.cs">
+      <DependentUpon>ConcernBuyThingPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

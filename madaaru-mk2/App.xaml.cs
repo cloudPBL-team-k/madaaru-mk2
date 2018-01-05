@@ -6,7 +6,7 @@ namespace madaarumk2 {
             //InitializeComponent();
 
             //MainPage = new madaaru_mk2Page();
-            MainPage = new NavigationPage(new madaaru_mk2Page());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart() {
