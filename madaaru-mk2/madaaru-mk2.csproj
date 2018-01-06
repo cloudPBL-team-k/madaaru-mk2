@@ -131,6 +131,9 @@
     <Compile Include="ServerInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="WrappedHttpClient.cs" />
+    <Compile Include="GetObjects.cs" />
+    <Compile Include="PostJson.cs" />
+    <Compile Include="Bought_expendable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
