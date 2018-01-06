@@ -11,14 +11,7 @@ namespace madaarumk2 {
             //通知設定をiOSに登録
             DependencyService.Get<INotificationService>().Regist();
 
-            if (!IsUserLoggedIn) {
-                //Loginページへ
-                MainPage = new NavigationPage(new LoginPage());
-            } else {
-                MainPage = new NavigationPage(new madaaru_mk2Page());
-            }
-
-
+            MainPage = new NavigationPage(new madaaru_mk2Page());
         }
 
         protected override void OnStart() {

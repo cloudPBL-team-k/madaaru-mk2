@@ -19,6 +19,12 @@ namespace madaarumk2.Droid {
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+            //未処理の例外を捕まえる.未処理なのでアプリが終了
+            AppDomain.CurrentDomain.UnhandledException += (s, e) => { };
+            //強制的に補足済みの例外にしてしまう.終了しない
+            //AndroidEnvironment.UnhandledExceptionRaiser += (s, e) => { e.Handled = true; };
+
+
             LoadApplication(new App());
         }
 

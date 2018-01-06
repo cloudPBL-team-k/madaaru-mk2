@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8620ed35-ca7a-4416-86c0-a1ea407583b5" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/madaaru-mk2/WrappedHttpClient.cs" />
+      <change beforePath="$PROJECT_DIR$/Droid/MainActivity.cs" afterPath="$PROJECT_DIR$/Droid/MainActivity.cs" />
+      <change beforePath="$PROJECT_DIR$/Droid/Properties/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Droid/Properties/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/Droid/Resources/Resource.designer.cs" afterPath="$PROJECT_DIR$/Droid/Resources/Resource.designer.cs" />
+      <change beforePath="$PROJECT_DIR$/Droid/madaaru-mk2.Droid.csproj" afterPath="$PROJECT_DIR$/Droid/madaaru-mk2.Droid.csproj" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/App.xaml.cs" afterPath="$PROJECT_DIR$/madaaru-mk2/App.xaml.cs" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/LoginPage.xaml" afterPath="$PROJECT_DIR$/madaaru-mk2/LoginPage.xaml" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/LoginPage.xaml.cs" afterPath="$PROJECT_DIR$/madaaru-mk2/LoginPage.xaml.cs" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2.csproj" afterPath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2.csproj" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2Page.xaml" afterPath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2Page.xaml" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2Page.xaml.cs" afterPath="$PROJECT_DIR$/madaaru-mk2/madaaru-mk2Page.xaml.cs" />
+      <change beforePath="$PROJECT_DIR$/madaaru-mk2/packages.config" afterPath="$PROJECT_DIR$/madaaru-mk2/packages.config" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="App.xaml.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madaaru-mk2/App.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1515234096063" expanded="true" signature="43:1089" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="88:681" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="169:379" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="183:234" ph="/* InitializeComponent(); ... */" />
+                <marker date="1515234096063" expanded="true" signature="423:477" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="521:575" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="620:675" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="688:773" ph="/* 「依存処理」のインターフェース定義 ... */" />
+                <marker date="1515234096063" expanded="true" signature="809:851" ph="{...}" />
+                <marker date="1515234096063" expanded="true" signature="925:1087" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bought_things.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madaaru-mk2/Bought_things.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1515156809223" expanded="false" signature="6:70" ph="..." />
+                <marker date="1515156809223" expanded="true" signature="93:655" ph="{...}" />
+                <marker date="1515156809223" expanded="true" signature="190:653" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoughtListPage.xaml.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madaaru-mk2/BoughtListPage.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <marker date="1515154322440" expanded="false" signature="6:69" ph="..." />
+                <marker date="1515154322440" expanded="true" signature="92:236" ph="{...}" />
+                <marker date="1515154322440" expanded="true" signature="148:234" ph="{...}" />
+                <marker date="1515154322440" expanded="true" signature="182:228" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Expendables.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madaaru-mk2/Expendables.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1515156811016" expanded="false" signature="6:70" ph="..." />
+                <marker date="1515156811016" expanded="true" signature="93:717" ph="{...}" />
+                <marker date="1515156811016" expanded="true" signature="173:715" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Droid/values/Strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalNotificationCenterDelegate.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iOS/LocalNotificationCenterDelegate.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1515156149851" expanded="false" signature="6:38" ph="..." />
+                <marker date="1515156149851" expanded="true" signature="65:955" ph="{...}" />
+                <marker date="1515156149851" expanded="true" signature="151:953" ph="{...}" />
+                <marker date="1515156149851" expanded="true" signature="321:947" ph="{...}" />
+                <marker date="1515156149851" expanded="true" signature="416:854" ph="{...}" />
+                <marker date="1515156149851" expanded="true" signature="651:717" ph="{...}" />
+                <marker date="1515156149851" expanded="true" signature="753:813" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iOS/Main.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1515151858631" expanded="false" signature="6:98" ph="..." />
+                <marker date="1515151858631" expanded="true" signature="125:468" ph="{...}" />
+                <marker date="1515151858631" expanded="true" signature="156:466" ph="{...}" />
+                <marker date="1515151858631" expanded="true" signature="258:460" ph="{...}" />
+                <marker date="1515151858631" expanded="true" signature="272:391" ph="/* if you want to use a different Application Delegate class from &quot;AppDelegate&quot; ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyFormsToast.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iOS/MyFormsToast.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1515156142699" expanded="false" signature="6:64" ph="..." />
+                <marker date="1515156142699" expanded="true" signature="165:2481" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="206:404" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="250:398" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="445:2479" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="698:1149" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="781:845" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="986:1099" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="1223:2473" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="1290:1401" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="2127:2250" ph="{...}" />
+                <marker date="1515156142699" expanded="true" signature="2292:2347" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/madaaru-mk2/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/iOS/MyFormsToast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/madaaru-mk2/BoughtListPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/iOS/Main.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/madaaru-mk2/Expendables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/madaaru-mk2/Bought_things.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/iOS/LocalNotificationCenterDelegate.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="madaaru-mk2 (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="madaaru-mk2 (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="madaaru-mk2" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="madaaru-mk2 (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="madaaru-mk2.Droid (synchronizing...)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="madaaru-mk2 (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="madaaru-mk2.iOS" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Xamarin.Android.Android Default">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+    </configuration>
+    <configuration name="Android Default" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Ask" />
+      <option name="DEFAULT_DEVICE_TO_RUN" value="" />
+      <option name="DEFAULT_EMULATOR_TO_RUN" value="" />
+    </configuration>
+    <configuration name="iOS Default" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+      <option name="PROJECT_PATH" value="" />
+      <option name="DEFAULT_IPHONE_DEVICE" value="" />
+      <option name="DEFAULT_IPHONE_SIMULATOR" value="" />
+      <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Ask" />
+      <envs />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+      <item index="1" class="java.lang.String" itemvalue="Xamarin.Android.Android Default" />
+      <item index="2" class="java.lang.String" itemvalue="Xamarin.iOS.iOS Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8620ed35-ca7a-4416-86c0-a1ea407583b5" name="Default" comment="" />
+      <created>1515230340094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1515230340094</updated>
+      <workItem from="1515230342955" duration="139000" />
+      <workItem from="1515230574337" duration="483000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="622000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/madaaru-mk2/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1515234096063" expanded="true" signature="43:1089" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="88:681" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="169:379" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="183:234" ph="/* InitializeComponent(); ... */" />
+            <marker date="1515234096063" expanded="true" signature="423:477" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="521:575" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="620:675" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="688:773" ph="/* 「依存処理」のインターフェース定義 ... */" />
+            <marker date="1515234096063" expanded="true" signature="809:851" ph="{...}" />
+            <marker date="1515234096063" expanded="true" signature="925:1087" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madaaru-mk2/Bought_things.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515156809223" expanded="false" signature="6:70" ph="..." />
+            <marker date="1515156809223" expanded="true" signature="93:655" ph="{...}" />
+            <marker date="1515156809223" expanded="true" signature="190:653" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madaaru-mk2/BoughtListPage.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1515154322440" expanded="false" signature="6:69" ph="..." />
+            <marker date="1515154322440" expanded="true" signature="92:236" ph="{...}" />
+            <marker date="1515154322440" expanded="true" signature="148:234" ph="{...}" />
+            <marker date="1515154322440" expanded="true" signature="182:228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madaaru-mk2/Expendables.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515156811016" expanded="false" signature="6:70" ph="..." />
+            <marker date="1515156811016" expanded="true" signature="93:717" ph="{...}" />
+            <marker date="1515156811016" expanded="true" signature="173:715" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Droid/values/Strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iOS/LocalNotificationCenterDelegate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515156149851" expanded="false" signature="6:38" ph="..." />
+            <marker date="1515156149851" expanded="true" signature="65:955" ph="{...}" />
+            <marker date="1515156149851" expanded="true" signature="151:953" ph="{...}" />
+            <marker date="1515156149851" expanded="true" signature="321:947" ph="{...}" />
+            <marker date="1515156149851" expanded="true" signature="416:854" ph="{...}" />
+            <marker date="1515156149851" expanded="true" signature="651:717" ph="{...}" />
+            <marker date="1515156149851" expanded="true" signature="753:813" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iOS/Main.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515151858631" expanded="false" signature="6:98" ph="..." />
+            <marker date="1515151858631" expanded="true" signature="125:468" ph="{...}" />
+            <marker date="1515151858631" expanded="true" signature="156:466" ph="{...}" />
+            <marker date="1515151858631" expanded="true" signature="258:460" ph="{...}" />
+            <marker date="1515151858631" expanded="true" signature="272:391" ph="/* if you want to use a different Application Delegate class from &quot;AppDelegate&quot; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iOS/MyFormsToast.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515156142699" expanded="false" signature="6:64" ph="..." />
+            <marker date="1515156142699" expanded="true" signature="165:2481" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="206:404" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="250:398" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="445:2479" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="698:1149" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="781:845" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="986:1099" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="1223:2473" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="1290:1401" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="2127:2250" ph="{...}" />
+            <marker date="1515156142699" expanded="true" signature="2292:2347" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

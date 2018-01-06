@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_madaaru-mk2.-2017054699.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Droid" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="AboutAssets.txt" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="madaaru-mk2.Droid.csproj" t="IncludeRecursive" />
+        <e p="MainActivity.cs" t="Include" />
+        <e p="MyFormsToast.cs" t="Include" />
+        <e p="NotificationService.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="drawable" t="Include">
+            <e p="icon.png" t="Include" />
+          </e>
+          <e p="drawable-hdpi" t="Include">
+            <e p="icon.png" t="Include" />
+          </e>
+          <e p="drawable-xhdpi" t="Include">
+            <e p="icon.png" t="Include" />
+          </e>
+          <e p="drawable-xxhdpi" t="Include">
+            <e p="icon.png" t="Include" />
+          </e>
+          <e p="layout" t="Include">
+            <e p="Tabbar.axml" t="Include" />
+            <e p="Toolbar.axml" t="Include" />
+          </e>
+          <e p="Resource.designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="styles.xml" t="Include" />
+          </e>
+        </e>
+        <e p="values" t="Include">
+          <e p="Strings.xml" t="Include" />
+        </e>
+      </e>
+      <e p="iOS" t="IncludeRecursive">
+        <e p="AppDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="Contents.json" t="Include" />
+          </e>
+          <e p="Contents.json" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entitlements.plist" t="Include" />
+        <e p="Info.plist" t="Include" />
+        <e p="LaunchScreen.storyboard" t="Include" />
+        <e p="LocalNotificationCenterDelegate.cs" t="Include" />
+        <e p="madaaru-mk2.iOS.csproj" t="IncludeRecursive" />
+        <e p="Main.cs" t="Include" />
+        <e p="MyFormsToast.cs" t="Include" />
+        <e p="NotificationService.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Resources" t="Include" />
+      </e>
+      <e p="madaaru-mk2" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bought_thing.cs" t="Include" />
+        <e p="Bought_things.cs" t="Include" />
+        <e p="BoughtListPage.xaml" t="Include" />
+        <e p="BoughtListPage.xaml.cs" t="Include" />
+        <e p="BoughtThingConcernPage.xaml" t="Include" />
+        <e p="BoughtThingConcernPage.xaml.cs" t="Include" />
+        <e p="BoughtThingResultEditPage.xaml" t="Include" />
+        <e p="BoughtThingResultEditPage.xaml.cs" t="Include" />
+        <e p="BuyThingListPage.xaml" t="Include" />
+        <e p="BuyThingListPage.xaml.cs" t="Include" />
+        <e p="ChoiceFromBoughtThingPage.xaml" t="Include" />
+        <e p="ChoiceFromBoughtThingPage.xaml.cs" t="Include" />
+        <e p="ChoiceShopPage.xaml" t="Include" />
+        <e p="ChoiceShopPage.xaml.cs" t="Include" />
+        <e p="CompleteBoughtThingPage.xaml" t="Include" />
+        <e p="CompleteBoughtThingPage.xaml.cs" t="Include" />
+        <e p="ConcernBuyThingPage.xaml" t="Include" />
+        <e p="ConcernBuyThingPage.xaml.cs" t="Include" />
+        <e p="Expendables.cs" t="Include" />
+        <e p="LoginPage.xaml" t="Include" />
+        <e p="LoginPage.xaml.cs" t="Include" />
+        <e p="madaaru-mk2.csproj" t="IncludeRecursive" />
+        <e p="madaaru-mk2Page.xaml" t="Include" />
+        <e p="madaaru-mk2Page.xaml.cs" t="Include" />
+        <e p="ManualInputBoughtThingPage.xaml" t="Include" />
+        <e p="ManualInputBoughtThingPage.xaml.cs" t="Include" />
+        <e p="ManualInputBuyThingPage.xaml" t="Include" />
+        <e p="ManualInputBuyThingPage.xaml.cs" t="Include" />
+        <e p="Next_buy_date.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ScanBuyThingPage.xaml" t="Include" />
+        <e p="ScanBuyThingPage.xaml.cs" t="Include" />
+        <e p="SearchedInfo.cs" t="Include" />
+        <e p="ServerInfo.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+        <e p="WrappedHttpClient.cs" t="Include" />
+      </e>
+      <e p="madaaru-mk2.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive">
+        <e p="Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2/proguard" t="Include">
+          <e p="proguard.txt" t="Include" />
+        </e>
+        <e p="Xamarin.Android.Support.Core.UI.25.4.0.2/proguard" t="Include">
+          <e p="proguard.txt" t="Include" />
+        </e>
+        <e p="Xamarin.Android.Support.Design.25.4.0.2/proguard" t="Include">
+          <e p="proguard.txt" t="Include" />
+        </e>
+        <e p="Xamarin.Android.Support.v7.RecyclerView.25.4.0.2/proguard" t="Include">
+          <e p="proguard.txt" t="Include" />
+        </e>
+      </e>
+    </e>
+  </component>
+</project>

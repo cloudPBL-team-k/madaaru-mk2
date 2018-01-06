@@ -1,5 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.LoginPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+       <StackLayout>
+        <!--Placeholderプロパティでプレースホルダの表示-->
+        <Entry Placeholder = "Name" x:Name="nameInput"/>
+        <Entry Text = "1" x:Name="idInput"/>
+         <!--IsPasswordプロパティで入力文字を隠す-->
+        <Entry Text = "あいうえ" IsPassword = "true" x:Name="passInput"/>
+        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="RED" />
+    </StackLayout>
 </ContentPage>

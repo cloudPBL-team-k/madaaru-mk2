@@ -130,6 +130,7 @@
     <Compile Include="SearchedInfo.cs" />
     <Compile Include="ServerInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="WrappedHttpClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
