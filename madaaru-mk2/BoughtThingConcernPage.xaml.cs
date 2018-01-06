@@ -8,5 +8,14 @@ namespace madaarumk2 {
         public BoughtThingConcernPage() {
             InitializeComponent();
         }
+
+
+        void OkBtnClicked(object sender, EventArgs s){
+            Navigation.PushAsync(new CompleteBoughtThingPage(), true);
+        }
+
+        void EditAgainBtnClicked(object sender, EventArgs s){
+            //前のページに戻って編集してもらいたいけど、データの受け渡しがわからない
+        }
     }
 }

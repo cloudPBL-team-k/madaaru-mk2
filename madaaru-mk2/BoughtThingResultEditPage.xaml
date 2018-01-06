@@ -1,5 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtThingResultEditPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout>
+        <Label>Text="商品の名前"</Label>
+
+        <Label>Text="jancode"</Label>
+        <Label>Text="個数入力"</Label>
+        <Label>Text="ここで個数を入力して次のページで確認してもらう"</Label>
+
+        <Button Text="確認画面へ" Clicked="OkNextPageBtnClicked" BackgroundColor="RED" />
+
+    </StackLayout>  
 </ContentPage>

@@ -1,5 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.ChoiceShopPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout>
+        <Label>Text="+チェックボックス式で"</Label>
+
+        <Label>Text="お店の"</Label>
+        <Label>Text="リストをここに"</Label>
+        <Label>Text="1つしか選択できないようにする"</Label>
+
+        <Button Text="この店で追加する" Clicked="addScanBtnClicked" BackgroundColor="RED" />
+
+    </StackLayout>  
 </ContentPage>

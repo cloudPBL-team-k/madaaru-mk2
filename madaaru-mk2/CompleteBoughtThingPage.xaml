@@ -1,5 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.CompleteBoughtThingPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout>
+        <Label>Text="次の行動を選択してもらう"</Label>
+        <Button Text="まだ登録する" Clicked="AddOtherOneBtnClicked" BackgroundColor="RED" />
+        <Button Text="登録を終了する" Clicked="FinishBtnClicked" BackgroundColor="RED" />
+    </StackLayout> 
 </ContentPage>

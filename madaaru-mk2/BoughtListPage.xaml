@@ -1,5 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtListPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout>
+        <Button Text="+" Clicked="addBtnClicked" BackgroundColor="RED" />
+        <Label>Text="+ボタンを右上に配置"</Label>
+
+        <Label>Text="品物"</Label>
+        <Label>Text="リストをここに"</Label>
+
+    </StackLayout>    
 </ContentPage>

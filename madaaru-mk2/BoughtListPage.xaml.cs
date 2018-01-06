@@ -8,5 +8,10 @@ namespace madaarumk2 {
         public BoughtListPage() {
             InitializeComponent();
         }
+
+
+        void addBtnClicked(object sender, EventArgs s){
+            Navigation.PushAsync(new ChoiceShopPage(), true);
+        }
     }
 }

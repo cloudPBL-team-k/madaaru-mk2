@@ -8,5 +8,13 @@ namespace madaarumk2 {
         public CompleteBoughtThingPage() {
             InitializeComponent();
         }
+
+        void AddOtherOneBtnClicked(object sender, EventArgs s){
+            
+        }
+
+        void FinishBtnClicked(object sender, EventArgs s){
+            
+        }
     }
 }
