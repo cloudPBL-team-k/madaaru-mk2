@@ -37,6 +37,7 @@ namespace madaarumk2 {
             } else {
                 //Login出来たフラグを立ててメインページに遷移
                 App.IsUserLoggedIn = true;
+                App.user = user;
                 Navigation.InsertPageBefore(new madaaru_mk2Page(), this);
                 await Navigation.PopAsync();
             }

@@ -3,5 +3,6 @@
     <StackLayout>
         <Button Text="買い物リスト" Clicked="BoughtListbtnClicked" />
         <Label Text="This is Main Page"/>
+        <Label Text="" x:Name="usernametext"/>
     </StackLayout>
 </ContentPage>

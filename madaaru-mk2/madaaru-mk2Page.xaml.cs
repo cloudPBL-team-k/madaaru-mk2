@@ -9,8 +9,10 @@ namespace madaarumk2 {
 
             //if (!App.IsUserLoggedIn) {
             //Loginページへ
-                //Navigation.PushAsync(new LoginPage(), true);
+            //Navigation.PushAsync(new LoginPage(), true);
             //} 
+
+            usernametext.Text = App.user.name + "さん、こんにちは";
         }
 
 
