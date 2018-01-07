@@ -1,9 +1,9 @@
 ﻿using System;
 namespace madaarumk2 {
     public class User {
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public int userId { get; set; }
+        public string name { get; set; }
+        public string password { get; set; }
+        public int id { get; set; }
         //public string Email { get; set; }
     }
 }

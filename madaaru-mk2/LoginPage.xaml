@@ -6,6 +6,6 @@
         <Entry Text = "1" x:Name="idInput"/>
          <!--IsPasswordプロパティで入力文字を隠す-->
         <Entry Text = "あいうえ" IsPassword = "true" x:Name="passInput"/>
-        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="RED" />
+        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="red" />
     </StackLayout>
 </ContentPage>
