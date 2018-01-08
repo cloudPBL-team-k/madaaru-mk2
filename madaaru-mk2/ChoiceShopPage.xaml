@@ -6,7 +6,11 @@
         <Label>Text="お店の"</Label>
         <Label>Text="リストをここに"</Label>
         <Label>Text="1つしか選択できないようにする"</Label>
-
+        <Label Text= "ShopA" x:Name="shopANameLabel"/>
+        <Label Text= "ShopB" x:Name="shopBNameLabel"/>
+        <Label Text= "ShopC" x:Name="shopCNameLabel"/>
+        <Label Text= "ShopD" x:Name="shopDNameLabel"/>
+        
         <Button Text="この店で追加する" Clicked="addScanBtnClicked" BackgroundColor="RED" />
 
     </StackLayout>  

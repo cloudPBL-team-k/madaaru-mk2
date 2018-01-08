@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:madaarumk2" x:Class="madaarumk2.madaaru_mk2Page">
     <StackLayout>
         <Button Text="買い物リスト" Clicked="BoughtListbtnClicked" />
+        <Button Text="買うものリスト" Clicked="BuyThingListbtnClicked" />
         <Label Text="This is Main Page"/>
     </StackLayout>
 </ContentPage>

@@ -24,14 +24,20 @@ namespace madaarumk2 {
                 Device.BeginInvokeOnMainThread(async () => {
                     scanedJancode = result.Text;
                     await Navigation.PopAsync();
-                    //スキャンして得た情報を使って何かしたい場合
-                    //ここに処理を書く
+                    //選択した店名をchosenShopNameに入れる
+                    string chosenShopName = shopANameLabel.Text;
+                    //chosenShopName,jancodeを渡す
+                    await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, scanedJancode), true);
+
                 });
             };
 
             DependencyService.Get<IMyFormsToast>().Show("ScanedJancode: " + scanedJancode);
 
-            await Navigation.PushAsync(new BoughtThingResultEditPage(scanedJancode), true);
+            ////選択した店名をchosenShopNameに入れる
+            //string chosenShopName = shopANameLabel.Text;
+            ////chosenShopName,jancodeを渡す
+            //await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, scanedJancode), true);
 
         }
     }

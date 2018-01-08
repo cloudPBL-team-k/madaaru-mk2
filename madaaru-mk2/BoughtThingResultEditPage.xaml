@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtThingResultEditPage">
     <StackLayout>
+        <Label Text="店名" x:Name="shopNameLabel"/>
         <Label>Text="商品の名前"</Label>
-
-        <Label>Text="jancode"</Label>
+        <Label Text="商品名読み込み中..." x:Name="itemNameLabel"/>
         <Label>Text="個数入力"</Label>
         <Label>Text="ここで個数を入力して次のページで確認してもらう"</Label>
-
+        <Entry Text= "1" x:Name="numInput"/>
         <Button Text="確認画面へ" Clicked="OkNextPageBtnClicked" BackgroundColor="RED" />
-
-    </StackLayout>  
+    </StackLayout> 
 </ContentPage>
