@@ -25,7 +25,7 @@ namespace madaarumk2 {
                 DependencyService.Get<IMyFormsToast>().Show(new string(chars));
                 */
                 loginReq.hashed = passInput.Text;
-            } catch(NullReferenceException e) {
+            } catch (NullReferenceException e) {
                 DependencyService.Get<IMyFormsToast>().Show("NULL EXCEPTION ERROR: name,passがNullです:" + e.Message);
                 return;
             }
@@ -38,7 +38,7 @@ namespace madaarumk2 {
             HttpResponseMessage response = await wHttpClient.PostAsync(baseURL + "/login", content);
             String result = await response.Content.ReadAsStringAsync();
             User user = JsonConvert.DeserializeObject<User>(result);
-            if(user.id == 0) {
+            if (user.id == 0) {
                 // ログイン失敗
                 DependencyService.Get<IMyFormsToast>().Show("ログイン失敗");
                 return;
@@ -49,6 +49,11 @@ namespace madaarumk2 {
                 Navigation.InsertPageBefore(new madaaru_mk2Page(), this);
                 await Navigation.PopAsync();
             }
+        }
+
+        async void SignupBtnClicked(object sender, EventArgs s) {
+            Navigation.InsertPageBefore(new SignUpPage(), this);
+            await Navigation.PopAsync();
         }
     }
 }
