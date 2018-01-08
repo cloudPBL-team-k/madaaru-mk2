@@ -3,6 +3,7 @@ using System;
 using System.Net.Http;
 using System.Text;
 using Xamarin.Forms;
+using PCLCrypto;
 
 namespace madaarumk2 {
     public partial class LoginPage : ContentPage {
@@ -11,11 +12,19 @@ namespace madaarumk2 {
         }
 
         async void LoginBtnClicked(object sender, EventArgs s) {
-            User inputUser = new User();
+            LoginRequest loginReq = new LoginRequest();
             try {
-                inputUser.name = nameInput.Text;
-                inputUser.password = passInput.Text;
-                inputUser.id = 0;
+                loginReq.name = nameInput.Text;
+                /*
+                 * TODO: SHA512によるハッシュ化がうまくいかない
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(passInput.Text);
+                var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
+                byte[] hash = hasher.HashData(data);
+                int count = hash.Length;
+                char[] chars = System.Text.Encoding.UTF8.GetChars(hash);
+                DependencyService.Get<IMyFormsToast>().Show(new string(chars));
+                */
+                loginReq.hashed = passInput.Text;
             } catch(NullReferenceException e) {
                 DependencyService.Get<IMyFormsToast>().Show("NULL EXCEPTION ERROR: name,passがNullです:" + e.Message);
                 return;
@@ -24,7 +33,7 @@ namespace madaarumk2 {
             // サーバにログイン
             WrappedHttpClient wHttpClient = new WrappedHttpClient();
             String baseURL = ServerInfo.url;
-            String jsonString = JsonConvert.SerializeObject(inputUser);
+            String jsonString = JsonConvert.SerializeObject(loginReq);
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await wHttpClient.PostAsync(baseURL + "/login", content);
             String result = await response.Content.ReadAsStringAsync();
