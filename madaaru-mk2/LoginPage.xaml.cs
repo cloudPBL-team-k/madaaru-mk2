@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using Xamarin.Forms;
@@ -37,7 +36,7 @@ namespace madaarumk2 {
             } else {
                 //Login出来たフラグを立ててメインページに遷移
                 App.IsUserLoggedIn = true;
-                App.user = user;
+                Application.Current.Properties["user"] = user;
                 Navigation.InsertPageBefore(new madaaru_mk2Page(), this);
                 await Navigation.PopAsync();
             }

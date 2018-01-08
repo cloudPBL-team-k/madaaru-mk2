@@ -2,10 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.LoginPage">
        <StackLayout>
         <!--Placeholderプロパティでプレースホルダの表示-->
-        <Entry Placeholder = "Name" x:Name="nameInput"/>
-        <Entry Text = "1" x:Name="idInput"/>
-         <!--IsPasswordプロパティで入力文字を隠す-->
-        <Entry Text = "あいうえ" IsPassword = "true" x:Name="passInput"/>
-        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="red" />
+        <Entry Placeholder = "ユーザ名" x:Name="nameInput"/>
+        <!--IsPasswordプロパティで入力文字を隠す-->
+        <Entry Text = "" IsPassword = "true" x:Name="passInput"/>
+        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="Orange" />
     </StackLayout>
 </ContentPage>

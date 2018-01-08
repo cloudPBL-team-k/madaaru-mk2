@@ -4,7 +4,6 @@ namespace madaarumk2 {
     public partial class App : Application {
 
         public static bool IsUserLoggedIn { get; set; }
-        public static User user { get; set; }
 
         public App() {
             //InitializeComponent();
@@ -21,7 +20,13 @@ namespace madaarumk2 {
         }
 
         private bool isLogin() {
-            return false;
+            // Applicatino.Current.Prooerties辞書オブジェクトにuserをkeyとするデータが入っていれば一度ログインしている
+            // TODO: なぜかアプリを終了するとデータが保存されていない(Emulatorだから？)
+            if(Application.Current.Properties.ContainsKey("user")) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         protected override void OnStart() {
