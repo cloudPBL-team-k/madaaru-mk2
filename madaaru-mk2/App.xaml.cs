@@ -4,6 +4,7 @@ using Xamarin.Forms;
 namespace madaarumk2 {
     public partial class App : Application {
 
+        public static bool IsInBackgrounded { get; private set; }
         public static bool IsUserLoggedIn { get; set; }
 
         public App() {
@@ -11,18 +12,21 @@ namespace madaarumk2 {
 
             DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
 
-            Notification.DefaultTitle = "Test Title";
-            var btnPermission = new Button { Text = "Request Permission" };
-            btnPermission.Command = new Command(async () => {
-                var result = await CrossNotifications.Current.RequestPermission();
-                btnPermission.Text = result ? "Permission Granted" : "Permission Denied";
-            });
+            //Notification.DefaultTitle = "Test Title";
+            //var btnPermission = new Button { Text = "Request Permission" };
+            //btnPermission.Command = new Command(async () => {
+            //    var result = await CrossNotifications.Current.RequestPermission();
+            //    btnPermission.Text = result ? "Permission Granted" : "Permission Denied";
+            //});
 
-            //通知設定をiOSに登録
-            DependencyService.Get<INotificationService>().Regist();
+            //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
 
-            MainPage = new NavigationPage(new madaaru_mk2Page());
-        }
+
+                //通知設定をiOSに登録
+                DependencyService.Get<INotificationService>().Regist();
+
+                MainPage = new NavigationPage(new madaaru_mk2Page());
+            }
 
         protected override void OnStart() {
             // Handle when your app starts
@@ -30,10 +34,12 @@ namespace madaarumk2 {
 
         protected override void OnSleep() {
             // Handle when your app sleeps
+            App.IsInBackgrounded = true;
         }
 
         protected override void OnResume() {
             // Handle when your app resumes
+            App.IsInBackgrounded = false;
         }
     }
 
