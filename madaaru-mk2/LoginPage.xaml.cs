@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Text;
 using Xamarin.Forms;
+using PCLCrypto;
 
 namespace madaarumk2 {
     public partial class LoginPage : ContentPage {
@@ -9,40 +11,44 @@ namespace madaarumk2 {
             InitializeComponent();
         }
 
-
-
         async void LoginBtnClicked(object sender, EventArgs s) {
+            LoginRequest loginReq = new LoginRequest();
             try {
-                if (nameInput.Text.Length != 0 && idInput.Text.Length != 0 && passInput.Text.Length != 0) {
-                    if (nameInput.Text.Length >= 3 && idInput.Text.Length >= 1 && passInput.Text.Length >= 5) {//id>=3,pass>=5
-                        int inputUserId = 1;
-                        if (int.TryParse(idInput.Text, out inputUserId)) {//idが数値に変換できるか確かめ、出来た場合inputUserIdに入る
-                            //Userに情報を入れる
-                            User user = new User();
-                            user.UserName = nameInput.Text;
-                            user.userId = inputUserId;
-                            user.Password = passInput.Text;
-
-                            //Login出来たフラグを立ててメインページに遷移
-                            App.IsUserLoggedIn = true;
-                            Navigation.InsertPageBefore(new madaaru_mk2Page(), this);
-                            await Navigation.PopAsync();
-
-                            DependencyService.Get<IMyFormsToast>().Show("実は本当のLogin機能は実装されていません!SeqGaba");
-                        } else {//Inputが数字以外
-                            DependencyService.Get<IMyFormsToast>().Show("Number ERROR: 数字を入力してください");
-                            passInput.Text = string.Empty;
-                        }
-
-                    } else {
-                        DependencyService.Get<IMyFormsToast>().Show("Login ERROR: nameは３文字以上、idは1文字以上、Passは５文字以上入力してください");
-                    }
-                } else {//id = null, pass = null
-                    DependencyService.Get<IMyFormsToast>().Show("Login ERROR: name,id,passを入力してください");
-                }
+                loginReq.name = nameInput.Text;
+                string before_hash = nameInput.Text + ":::" + passInput.Text;
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(before_hash);
+                var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
+                byte[] hash = hasher.HashData(data);
+                loginReq.hashed = BitConverter.ToString(hash).Replace("-", string.Empty).ToLower();
             } catch (NullReferenceException e) {
-                DependencyService.Get<IMyFormsToast>().Show("NULL EXCEPTION ERROR: name,id,passがNullです:" + e.Message);
+                DependencyService.Get<IMyFormsToast>().Show("NULL EXCEPTION ERROR: name,passがNullです:" + e.Message);
+                return;
             }
+
+            // サーバにログイン
+            WrappedHttpClient wHttpClient = new WrappedHttpClient();
+            String baseURL = ServerInfo.url;
+            String jsonString = JsonConvert.SerializeObject(loginReq);
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await wHttpClient.PostAsync(baseURL + "/login", content);
+            String result = await response.Content.ReadAsStringAsync();
+            User user = JsonConvert.DeserializeObject<User>(result);
+            if (user.id == 0) {
+                // ログイン失敗
+                DependencyService.Get<IMyFormsToast>().Show("ログイン失敗");
+                return;
+            } else {
+                //Login出来たフラグを立ててメインページに遷移
+                App.IsUserLoggedIn = true;
+                Application.Current.Properties["user"] = user;
+                Navigation.InsertPageBefore(new madaaru_mk2Page(), this);
+                await Navigation.PopAsync();
+            }
+        }
+
+        async void SignupBtnClicked(object sender, EventArgs s) {
+            Navigation.InsertPageBefore(new SignUpPage(), this);
+            await Navigation.PopAsync();
         }
     }
 }
