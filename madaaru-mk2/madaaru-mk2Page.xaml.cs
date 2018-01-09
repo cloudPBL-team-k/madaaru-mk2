@@ -12,7 +12,8 @@ namespace madaarumk2 {
             //Navigation.PushAsync(new LoginPage(), true);
             //} 
 
-            usernametext.Text = App.user.name + "さん、こんにちは";
+            User user = (User)Application.Current.Properties["user"];
+            usernametext.Text = user.name + "さん、こんにちは";
         }
 
 

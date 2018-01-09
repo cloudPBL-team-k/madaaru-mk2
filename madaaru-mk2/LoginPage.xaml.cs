@@ -17,14 +17,12 @@ namespace madaarumk2 {
                 loginReq.name = nameInput.Text;
                 /*
                  * TODO: SHA512によるハッシュ化がうまくいかない
-                byte[] data = System.Text.Encoding.UTF8.GetBytes(passInput.Text);
+                 */
+                string before_hash = nameInput.Text + ":::" + passInput.Text;
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(before_hash);
                 var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
                 byte[] hash = hasher.HashData(data);
-                int count = hash.Length;
-                char[] chars = System.Text.Encoding.UTF8.GetChars(hash);
-                DependencyService.Get<IMyFormsToast>().Show(new string(chars));
-                */
-                loginReq.hashed = passInput.Text;
+                loginReq.hashed = BitConverter.ToString(hash).Replace("-", string.Empty).ToLower();
             } catch (NullReferenceException e) {
                 DependencyService.Get<IMyFormsToast>().Show("NULL EXCEPTION ERROR: name,passがNullです:" + e.Message);
                 return;
