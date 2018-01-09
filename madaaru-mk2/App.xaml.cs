@@ -9,7 +9,11 @@ namespace madaarumk2 {
 
         public App() {
             InitializeComponent();
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> master
             DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
 
             //Notification.DefaultTitle = "Test Title";
@@ -18,15 +22,34 @@ namespace madaarumk2 {
             //    var result = await CrossNotifications.Current.RequestPermission();
             //    btnPermission.Text = result ? "Permission Granted" : "Permission Denied";
             //});
+<<<<<<< HEAD
 
             //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
+=======
+>>>>>>> master
 
+            //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
 
             //通知設定をiOSに登録
             DependencyService.Get<INotificationService>().Regist();
 
+            // ここでSign In or Log In 済みか判定
+            if(isLogin()) {
                 MainPage = new NavigationPage(new madaaru_mk2Page());
+            } else { 
+                MainPage = new NavigationPage(new LoginPage());
             }
+        }
+
+        private bool isLogin() {
+            // Applicatino.Current.Prooerties辞書オブジェクトにuserをkeyとするデータが入っていれば一度ログインしている
+            // TODO: なぜかアプリを終了するとデータが保存されていない(Emulatorだから？)
+            if(Application.Current.Properties.ContainsKey("user")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
         protected override void OnStart() {
             // Handle when your app starts
