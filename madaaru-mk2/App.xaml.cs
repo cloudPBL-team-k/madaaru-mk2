@@ -22,8 +22,8 @@ namespace madaarumk2 {
             //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
 
 
-                //通知設定をiOSに登録
-                DependencyService.Get<INotificationService>().Regist();
+            //通知設定をiOSに登録
+            DependencyService.Get<INotificationService>().Regist();
 
                 MainPage = new NavigationPage(new madaaru_mk2Page());
             }

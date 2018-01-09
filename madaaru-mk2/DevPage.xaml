@@ -11,6 +11,8 @@
         <Button Text="LightWeight Scan Test" Clicked="LightScanBtnClicked" />
         <Button Text="Notification Test" Clicked="NotificationBtnClicked" />
         <Button Text="Scheduled Notification" Clicked="ScheduledNotificationBtnClicked" />
+        <Button Text="NOT Scheduled Notification" Clicked="NotScheduledNotificationBtnClicked" />
+        <Button Text="NOT Async Notification" Clicked="NotScheduledNotificationBtnClicked" />
         <Button Text="Back to Main Page" Clicked="BackMainPageBtnClicked" BackgroundColor="Orange" />
     </StackLayout>
 </ContentPage>
