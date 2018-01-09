@@ -26,6 +26,9 @@ namespace madaarumk2.Droid {
 
 
             LoadApplication(new App());
+
+            BackgroundService bc = new BackgroundService();
+            bc.StartbackgroundService();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
