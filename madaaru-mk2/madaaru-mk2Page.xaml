@@ -3,6 +3,7 @@
     <StackLayout>
         <Button Text="買い物リスト" Clicked="BoughtListbtnClicked" />
         <Button Text="買うものリスト" Clicked="BuyThingListbtnClicked" />
-        <Label Text="This is Main Page"/>
+        <Button Text="Develop Pageへ" Clicked="DevPagebtnClicked" />
+        <Label Text="This is Main Page" />
     </StackLayout>
 </ContentPage>

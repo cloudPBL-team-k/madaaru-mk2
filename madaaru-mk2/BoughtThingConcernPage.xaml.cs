@@ -51,6 +51,8 @@ namespace madaarumk2 {
 
             //登録完了したので完了したことを伝えるページに遷移
             //shopName(店名)、item.Name(商品名)、bt(bt.numで個数)、nextBuyDate(limit)
+            //Page cbtPage = new CompleteBoughtThingPage(shopName, item, bt, nextBuyDate);
+            //await Navigation.PushAsync(cbtPage, true);
             await Navigation.PushAsync(new CompleteBoughtThingPage(shopName, item, bt, nextBuyDate), true);
 
 
@@ -60,6 +62,9 @@ namespace madaarumk2 {
 
         void EditAgainBtnClicked(object sender, EventArgs s) {
             //前のページに戻って編集してもらいたいけど、データの受け渡しがわからない
+            //とりあえず、前の個数入力ページに戻るだけ
+            //数のみの修正になる
+            Navigation.PopAsync();
         }
     }
 }

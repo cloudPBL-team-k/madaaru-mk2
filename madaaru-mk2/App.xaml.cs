@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Plugin.Notifications;
+using Xamarin.Forms;
 
 namespace madaarumk2 {
     public partial class App : Application {
@@ -6,7 +7,16 @@ namespace madaarumk2 {
         public static bool IsUserLoggedIn { get; set; }
 
         public App() {
-            //InitializeComponent();
+            InitializeComponent();
+
+            DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
+
+            Notification.DefaultTitle = "Test Title";
+            var btnPermission = new Button { Text = "Request Permission" };
+            btnPermission.Command = new Command(async () => {
+                var result = await CrossNotifications.Current.RequestPermission();
+                btnPermission.Text = result ? "Permission Granted" : "Permission Denied";
+            });
 
             //通知設定をiOSに登録
             DependencyService.Get<INotificationService>().Regist();

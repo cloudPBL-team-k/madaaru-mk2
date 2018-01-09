@@ -21,5 +21,9 @@ namespace madaarumk2 {
 
 
 
+        void DevPagebtnClicked(object sender, EventArgs s) {
+            DependencyService.Get<IMyFormsToast>().Show("DevPageへ遷移します");
+            Navigation.PushAsync(new DevPage(), true);
+        }
     }
 }

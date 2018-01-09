@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.DevPage">
+    <StackLayout Padding="10" BackgroundColor="beige">
+        <Button Text="Login Page" Clicked="LoginBtnClicked" BackgroundColor="Red" />
+        <Button Text="Scan" Clicked="ScanButtonClicked" />
+        <!--<ListView ItemsSource="{Binding}" VerticalOptions="FillAndExpand"/>-->
+        <!--Scanした番号を表示-->
+        <Button Text="Show Jancode" Clicked="ShowJancodeButtonClicked" />
+        <Button Text="Show Item Name" Clicked="ShowItemNameButtonClicked" />
+        <Button Text="Toast" Clicked="ToastDevBtnClicked" />
+        <Button Text="LightWeight Scan Test" Clicked="LightScanBtnClicked" />
+        <Button Text="Notification Test" Clicked="NotificationBtnClicked" />
+        <Button Text="Scheduled Notification" Clicked="ScheduledNotificationBtnClicked" />
+        <Button Text="Back to Main Page" Clicked="BackMainPageBtnClicked" BackgroundColor="Orange" />
+    </StackLayout>
+</ContentPage>

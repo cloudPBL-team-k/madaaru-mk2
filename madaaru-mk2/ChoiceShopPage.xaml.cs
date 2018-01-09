@@ -24,15 +24,34 @@ namespace madaarumk2 {
                 Device.BeginInvokeOnMainThread(async () => {
                     scanedJancode = result.Text;
                     await Navigation.PopAsync();
+
                     //選択した店名をchosenShopNameに入れる
                     string chosenShopName = shopANameLabel.Text;
-                    //chosenShopName,jancodeを渡す
-                    await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, scanedJancode), true);
 
+                    DependencyService.Get<IMyFormsToast>().Show("Jancode: " + scanedJancode + "で問い合わせ中");
+
+                    //jancodeを元にサーバに商品情報を取得
+                    GetObjects go = new GetObjects();
+                    string jsonString = await go.GetItemJsonString(scanedJancode);
+
+                    if (scanedJancode != null) {//jsonの内容をチェック
+                        //SearchedInfo thingInfo = new SearchedInfo();
+                        SearchedInfo thingInfo = go.GetItemObjectFromJson(jsonString);
+
+                        //chosenShopName,SearchedInfoを渡す
+                        await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, thingInfo), true);
+                    } else {//jancode is null
+                        DependencyService.Get<IMyFormsToast>().Show("サーバにデータがありません。商品名を手入力してください");
+                        //できればdisplayactionsheetで再スキャンか
+                        //入力画面に移行するかを選べるようにする
+
+                        //手入力画面に移行する
+                        await Navigation.PushAsync(new ManualInputBuyThingPage(), true);
+                    }
                 });
             };
 
-            DependencyService.Get<IMyFormsToast>().Show("ScanedJancode: " + scanedJancode);
+            //DependencyService.Get<IMyFormsToast>().Show("ScanedJancode: " + scanedJancode);
 
             ////選択した店名をchosenShopNameに入れる
             //string chosenShopName = shopANameLabel.Text;
