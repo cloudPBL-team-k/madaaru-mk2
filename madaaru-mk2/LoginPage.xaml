@@ -4,8 +4,8 @@
         <!--Placeholderプロパティでプレースホルダの表示-->
         <Entry Placeholder = "ユーザ名" x:Name="nameInput"/>
         <!--IsPasswordプロパティで入力文字を隠す-->
-        <Entry Text = "" IsPassword = "true" x:Name="passInput"/>
-        <Button Text="Log-in" Clicked="LoginBtnClicked" BackgroundColor="Orange" />
-        <Button Text="Signup" Clicked="SignupBtnClicked" BackgroundColor="BlueViolet" />
+        <Entry Placeholder="パスワード" Text = "" IsPassword = "true" x:Name="passInput"/>
+        <Button Text="Log-in" TextColor="White" Clicked="LoginBtnClicked" BackgroundColor="Green" />
+        <Button Text="Signup" TextColor="White" Clicked="SignupBtnClicked" BackgroundColor="Navy" />
     </StackLayout>
 </ContentPage>

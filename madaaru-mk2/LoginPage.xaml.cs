@@ -15,9 +15,6 @@ namespace madaarumk2 {
             LoginRequest loginReq = new LoginRequest();
             try {
                 loginReq.name = nameInput.Text;
-                /*
-                 * TODO: SHA512によるハッシュ化がうまくいかない
-                 */
                 string before_hash = nameInput.Text + ":::" + passInput.Text;
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(before_hash);
                 var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
