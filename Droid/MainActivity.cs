@@ -26,6 +26,21 @@ namespace madaarumk2.Droid {
 
 
             LoadApplication(new App());
+
+            Android.Util.Log.Debug("MainActivity", "Start BackgroundService");
+            // バックグラウンドサービス起動
+            var intent = new Intent(this, typeof(BackgroundService));
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop) {
+                // After Lollipop(?)
+                Context context = Android.App.Application.Context;
+                string packageName = context.PackageManager.GetPackageInfo(context.PackageName, 0).PackageName;
+                intent.SetPackage(packageName);
+                intent.SetClassName(context, packageName + ".BackgroundService");
+            } else {
+                intent.AddFlags(ActivityFlags.NewTask);
+            }
+            intent.PutExtra("userid", 1);
+            StartService(intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
