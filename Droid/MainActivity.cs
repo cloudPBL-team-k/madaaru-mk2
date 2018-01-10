@@ -39,6 +39,7 @@ namespace madaarumk2.Droid {
             } else {
                 intent.AddFlags(ActivityFlags.NewTask);
             }
+            intent.PutExtra("userid", 1);
             StartService(intent);
         }
 

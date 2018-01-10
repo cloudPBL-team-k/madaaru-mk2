@@ -24,7 +24,7 @@ public class BackgroundService : Service {
                 DateTime dt = DateTime.Now;
                 // 毎日AM9:00のみ一度実行
                 if(dt.Hour != 9 && dt.Minute != 0 && dt.Second != 0) {
-                    continue;
+                    // continue;
                 }
                 string today = dt.ToString("yyyy-MM-dd");
 
@@ -33,7 +33,10 @@ public class BackgroundService : Service {
 
                 // PCLのクラス実行
                 madaarumk2.GetObjects go = new madaarumk2.GetObjects();
-                int userId = 1;
+                int userId = intent.GetIntExtra("userid", 0);
+                if(userId == 0) {
+                    continue;
+                }
                 string jsonString = await go.GetExpendablesInfo(userId);
                 if (jsonString == "null") {
                     continue;
