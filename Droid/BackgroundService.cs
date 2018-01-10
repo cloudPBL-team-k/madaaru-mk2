@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
@@ -20,6 +21,13 @@ public class BackgroundService : Service {
                 // 開発用。ずっとサーバにアクセスし続けるので一旦何もしないようにする
                 continue;
 
+                DateTime dt = DateTime.Now;
+                // 毎日AM9:00のみ一度実行
+                if(dt.Hour != 9 && dt.Minute != 0 && dt.Second != 0) {
+                    continue;
+                }
+                string today = dt.ToString("yyyy-MM-dd");
+
                 var bundle = new Bundle();
                 global::Xamarin.Forms.Forms.Init(this, bundle);
 
@@ -34,6 +42,11 @@ public class BackgroundService : Service {
                 Dictionary<string, string> item = new Dictionary<string, string>();
 
                 for (int n = 0; n < expInfo.Count; n++){
+
+                    if(expInfo[n].limit != today) {
+                        continue;
+                    }
+                    // TODO: aliasを使うようにする(要Expendablesクラスの拡張)
                     madaarumk2.BackgroundNotification.Main(expInfo[n].name);
                 }
             }
