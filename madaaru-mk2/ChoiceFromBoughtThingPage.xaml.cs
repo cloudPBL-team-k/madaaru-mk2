@@ -63,10 +63,12 @@ namespace madaarumk2 {
             User userInfo = (User)Application.Current.Properties["user"];
             int user_id = userInfo.id;
 
+            ////List<G_Buy_Thing> BuyThingList = await go.GetBuyThingObjects(user_id);
+
+
             //Todo:ここのコメントアウトを外す
             //GetObjects go = new GetObjects();
             //BuyThingList = await go.GetBuyThingObjects(user_id);
-            ////List<G_Buy_Thing> BuyThingList = await go.GetBuyThingObjects(user_id);
             //for (int i = 0; i < BuyThingList.Count; i++){
             //    ItemNameList.Add(BuyThingList[i].name);
             //}
