@@ -10,7 +10,7 @@ namespace madaarumk2 {
         public App() {
             InitializeComponent();
 
-            DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
+            //DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
 
             //Notification.DefaultTitle = "Test Title";
             //var btnPermission = new Button { Text = "Request Permission" };

@@ -68,7 +68,6 @@ namespace madaarumk2 {
             WrappedHttpClient whc = new WrappedHttpClient();
 
             string jsonString = await whc.GetStringAsync(reqUrl);
-
             return jsonString;
         }
 
