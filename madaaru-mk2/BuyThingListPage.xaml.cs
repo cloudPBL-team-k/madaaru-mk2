@@ -52,9 +52,16 @@ namespace madaarumk2 {
 
                             if (scanedJancode != null) {//jsonの内容をチェック
                                 //jancodeを元に情報を作成
+                                SearchedInfo thingInfo = go.GetItemObjectFromJson(jsonString);
+                                Bought_thing bt = new Bought_thing();
+                                User userInfo = (User)Application.Current.Properties["user"];
+                                bt.user_id = userInfo.id;
+                                bt.num = 1;
+                                bt.thing_id = thingInfo.Id;
 
+                                //Todo:数をいれてもらわないといけない
                                 //登録に必要な情報を渡す
-                                await Navigation.PushAsync(new ConcernBuyThingPage(), true);
+                                await Navigation.PushAsync(new ConcernBuyThingPage(bt), true);
                             } else {//jancode is null
                                 DependencyService.Get<IMyFormsToast>().Show("サーバにデータがありません");
                                 //手入力画面に移行する.手入力ページが未実装なのでコメントアウト
