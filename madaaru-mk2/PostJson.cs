@@ -61,27 +61,14 @@ namespace madaarumk2 {
         public async Task<P_Res_Buy_Thing> PostBuyThingInfo(Bought_thing bt) {
             User userInfo = (User)Application.Current.Properties["user"];
             int user_id = userInfo.id;
-
             string serverUrl = ServerInfo.url;
             string searchAPIUrl = "/buy_things?";
             string reqUrl = $"{serverUrl}{searchAPIUrl}?=user_id={user_id}";
             //buy_things?user_id=1;
 
             string jsonString = JsonConvert.SerializeObject(bt);
-
-            DependencyService.Get<IMyFormsToast>().Show(jsonString);
-
-
-            //HttpClient hc = new HttpClient();
             WrappedHttpClient whc = new WrappedHttpClient();
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-
-            //DependencyService.Get<IMyFormsToast>().Show("Created content!!1");
-
-            //HttpResponseMessage response = await hc.PostAsync(reqUrl, content);
-
-
-            //ここでエラー
             HttpResponseMessage response = await whc.PostAsync(reqUrl, content);
             string result = await response.Content.ReadAsStringAsync();
 

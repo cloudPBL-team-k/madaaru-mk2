@@ -24,6 +24,7 @@ namespace madaarumk2 {
                 PostJson pj = new PostJson();
                 P_Res_Buy_Thing prbt = await pj.PostBuyThingInfo(bt);
 
+                //Todo:なにかメッセージ表示する
                 await DisplayAlert("登録完了", prbt.updated_at.ToString(), "OK");
                 //ページを離れる
 
