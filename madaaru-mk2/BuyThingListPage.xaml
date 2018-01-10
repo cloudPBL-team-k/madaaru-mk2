@@ -3,8 +3,7 @@
     <StackLayout>
         <Button Text="+" Clicked="addBtnClicked" BackgroundColor="RED" />
         <Label>Text="+ボタンを右上に配置"</Label>
-        <Label>Text="品物"</Label>
-        <Label>Text="リストをここに"</Label>
+        <Label>Text="品物リストをここに"</Label>
         <Button Text="Refresh List" Clicked="RefreshListBtnClicked" />
     </StackLayout>
 </ContentPage>

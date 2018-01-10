@@ -20,17 +20,14 @@ namespace madaarumk2 {
         }
 
         void BoughtListbtnClicked(object sender, EventArgs s){
-            DependencyService.Get<IMyFormsToast>().Show("BoughtListPageへ遷移します");
             Navigation.PushAsync(new BoughtListPage(), true);
         }
 
         void BuyThingListbtnClicked(object sender, EventArgs s) {
-            DependencyService.Get<IMyFormsToast>().Show("BuyThingListPageへ遷移します");
             Navigation.PushAsync(new BuyThingListPage(), true);
         }
 
         void DevPagebtnClicked(object sender, EventArgs s) {
-            DependencyService.Get<IMyFormsToast>().Show("DevPageへ遷移します");
             Navigation.PushAsync(new DevPage(), true);
         }
     }

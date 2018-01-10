@@ -150,6 +150,7 @@
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="G_Buy_Thing.cs" />
+    <Compile Include="P_Res_Buy_Thing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Platform">

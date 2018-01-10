@@ -1,5 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.ConcernBuyThingPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout>
+        <Label Text="個数を入力してください" />
+        <Entry Text="1" x:Name="numInput" />
+        <Button Text="登録する" Clicked="OkDoneBtnClicked" />
+        <Button Text="キャンセル" Clicked="CancelBtnClicked" BackgroundColor="Red"/>
+    </StackLayout>
 </ContentPage>
