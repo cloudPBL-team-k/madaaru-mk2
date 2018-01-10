@@ -1,8 +1,10 @@
-﻿using System.Threading;
+﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
+//using madaarumk2;
 
 [Service(Name ="com.kyutech.klab.and.ksl.madaaru_mk2.BackgroundService", Exported= false, Process =":BackgroundService")]
 public class BackgroundService : Service {
@@ -12,17 +14,30 @@ public class BackgroundService : Service {
 
     public override StartCommandResult OnStartCommand(Android.Content.Intent intent, StartCommandFlags flags, int startId) {
         Android.Util.Log.Debug("BackgroundService", "Started BackgroundService");
-        Thread t = new Thread(() => {
-            while (true) {
-                System.Threading.Thread.Sleep(10000);
+        Task.Run(async () => {
+            while(true) {
+                await Task.Delay(10000);
+                // 開発用。ずっとサーバにアクセスし続けるので一旦何もしないようにする
+                continue;
+
                 var bundle = new Bundle();
                 global::Xamarin.Forms.Forms.Init(this, bundle);
 
                 // PCLのクラス実行
-                madaarumk2.BackgroundNotification.Main();
+                madaarumk2.GetObjects go = new madaarumk2.GetObjects();
+                int userId = 1;
+                string jsonString = await go.GetExpendablesInfo(userId);
+                if (jsonString == "null") {
+                    continue;
+                }
+                List<madaarumk2.Expendables> expInfo = go.GetAllItemsObjectFromJson(jsonString);
+                Dictionary<string, string> item = new Dictionary<string, string>();
+
+                for (int n = 0; n < expInfo.Count; n++){
+                    madaarumk2.BackgroundNotification.Main(expInfo[n].name);
+                }
             }
         });
-        t.Start();
 
         return StartCommandResult.Sticky;
     }

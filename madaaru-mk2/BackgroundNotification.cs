@@ -3,8 +3,8 @@ using Xamarin.Forms;
 
 namespace madaarumk2 {
     public class BackgroundNotification {
-        public static void Main() {
-            DependencyService.Get<INotificationService>().On("タイトル", "SubTitleです", "本文");
+        public static void Main(string msg) {
+            DependencyService.Get<INotificationService>().On("まだある？", "なくなりそうです！", msg);
         }
     }
 }
