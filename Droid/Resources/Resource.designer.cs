@@ -26,6 +26,8 @@ namespace madaarumk2.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::madaarumk2.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::madaarumk2.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::madaarumk2.Droid.Resource.Attribute.actionBarSize;
 			global::ZXing.Net.Mobile.Forms.Android.Resource.Layout.zxingscanneractivitylayout = global::madaarumk2.Droid.Resource.Layout.zxingscanneractivitylayout;
 			global::ZXing.Net.Mobile.Forms.Android.Resource.Layout.zxingscannerfragmentlayout = global::madaarumk2.Droid.Resource.Layout.zxingscannerfragmentlayout;
@@ -3639,6 +3641,12 @@ namespace madaarumk2.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f070040
+			public const int ApplicationName = 2131165248;
+			
+			// aapt resource value: 0x7f07003f
+			public const int Hello = 2131165247;
 			
 			// aapt resource value: 0x7f070016
 			public const int abc_action_bar_home_description = 2131165206;

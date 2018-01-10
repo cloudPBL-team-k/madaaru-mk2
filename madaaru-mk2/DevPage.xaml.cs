@@ -148,21 +148,21 @@ namespace madaarumk2 {
             var i = 1;
             var seconds = i * 5;
 
-            await CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago", When = TimeSpan.FromSeconds(seconds) });
+            //await CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago", When = TimeSpan.FromSeconds(seconds) });
 
             //DependencyService.Get<INotificationService>().On("タイトル", "SubTitleです", "本文");
         }
 
         async void NotScheduledNotificationBtnClicked(object sender, EventArgs e) {
 
-            await CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago"});
+            //await CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago"});
 
             //DependencyService.Get<INotificationService>().On("タイトル", "SubTitleです", "本文");
         }
 
         void NotAsyncNotificationBtnClicked(object sender, EventArgs e) {
 
-            CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago" });
+            //CrossNotifications.Current.Send(new Notification { Title = "Title desu", Message = "I sent this a long time ago" });
 
             //DependencyService.Get<INotificationService>().On("タイトル", "SubTitleです", "本文");
         }

@@ -45,8 +45,8 @@ namespace madaarumk2 {
                         //できればdisplayactionsheetで再スキャンか
                         //入力画面に移行するかを選べるようにする
 
-                        //手入力画面に移行する
-                        await Navigation.PushAsync(new ManualInputBuyThingPage(), true);
+                        //手入力画面に移行する.手入力ページが未実装なのでコメントアウト
+                        //await Navigation.PushAsync(new ManualInputBoughtThingPage(), true);
                     }
                 });
             };

@@ -8,5 +8,7 @@ namespace madaarumk2 {
         public ConcernBuyThingPage() {
             InitializeComponent();
         }
+
+
     }
 }

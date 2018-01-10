@@ -9,12 +9,8 @@ namespace madaarumk2 {
 
         public App() {
             InitializeComponent();
-<<<<<<< HEAD
 
-=======
-
->>>>>>> master
-            DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
+            //DependencyService.Get<IMyFormsToast>().Show("Notification Initialize shart@AppClass");
 
             //Notification.DefaultTitle = "Test Title";
             //var btnPermission = new Button { Text = "Request Permission" };
@@ -22,12 +18,6 @@ namespace madaarumk2 {
             //    var result = await CrossNotifications.Current.RequestPermission();
             //    btnPermission.Text = result ? "Permission Granted" : "Permission Denied";
             //});
-<<<<<<< HEAD
-
-            //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
-=======
->>>>>>> master
-
             //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
 
             //通知設定をiOSに登録
