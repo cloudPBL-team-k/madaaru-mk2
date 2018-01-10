@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace madaarumk2 {
     public partial class BoughtListPage : ContentPage {
@@ -18,12 +19,12 @@ namespace madaarumk2 {
         }
 
         //List更新ボタン
-        void RefreshListBtnClicked(object sender, EventArgs s){
-            setBoughtList();
+        async void RefreshListBtnClicked(object sender, EventArgs s){
+            await setBoughtList();
         }
 
         //Listを取得してセットする処理を書く
-        async void setBoughtList(){
+        async Task setBoughtList(){
             GetObjects go = new GetObjects();
             int userId = 1;
             string jsonString = await go.GetExpendablesInfo(userId);
