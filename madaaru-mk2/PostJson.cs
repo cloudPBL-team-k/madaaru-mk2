@@ -63,7 +63,7 @@ namespace madaarumk2 {
             int user_id = userInfo.id;
             string serverUrl = ServerInfo.url;
             string searchAPIUrl = "/buy_things?";
-            string reqUrl = $"{serverUrl}{searchAPIUrl}?=user_id={user_id}";
+            string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
             //buy_things?user_id=1;
 
             string jsonString = JsonConvert.SerializeObject(bt);

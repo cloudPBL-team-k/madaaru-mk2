@@ -79,7 +79,7 @@ namespace madaarumk2 {
         public async Task<Expendables> GetExpendablesObject(int user_id) {
             string serverUrl = ServerInfo.url;
             string searchAPIUrl = "/expendables.json";
-            string reqUrl = $"{serverUrl}{searchAPIUrl}?=user_id={user_id}";
+            string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
 
             WrappedHttpClient whc = new WrappedHttpClient();
             string jsonString = await whc.GetStringAsync(reqUrl);
@@ -90,7 +90,7 @@ namespace madaarumk2 {
         public async Task<List<G_Buy_Thing>> GetBuyThingObjects(int user_id){
             string serverUrl = ServerInfo.url;
             string searchAPIUrl = "/bought_things/exists_bought";
-            string reqUrl = $"{serverUrl}{searchAPIUrl}?=user_id={user_id}";
+            string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
             //bought_things/exists_bought?user_id=1;
 
 

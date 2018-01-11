@@ -29,8 +29,8 @@ namespace madaarumk2 {
 
             if (chosenNum != -1) {
                 // Todo:コメントアウトを変える
-                //bt.thing_id = BuyThingList[chosenNum].thing_id;
-                bt.thing_id = chosenNum;
+                bt.thing_id = BuyThingList[chosenNum].thing_id;
+                //bt.thing_id = chosenNum;
 
                 //登録に必要な情報を渡す
                 Navigation.PushAsync(new ConcernBuyThingPage(bt), true);
@@ -49,40 +49,30 @@ namespace madaarumk2 {
             ResistBtn.Text = s.SelectedItem.ToString() + "を登録する";
             var index = (itemListView.ItemsSource as List<string>).IndexOf(s.SelectedItem as string);
             chosenNum = index;
-            //Todo:消す
-            //DependencyService.Get<IMyFormsToast>().Show("選択された数は" + index);
         }
 
 
-        //Todo:Listを取得してセットする処理を書く
+        //リストに表示する情報を取得してくる
         async Task setList() {
-            //リストに表示する情報を取得してくる
             User userInfo = (User)Application.Current.Properties["user"];
             int user_id = userInfo.id;
 
-            ////List<G_Buy_Thing> BuyThingList = await go.GetBuyThingObjects(user_id);
-
-
-            //Todo:ここのコメントアウトを外す
-            //GetObjects go = new GetObjects();
-            //BuyThingList = await go.GetBuyThingObjects(user_id);
-            //for (int i = 0; i < BuyThingList.Count; i++){
-            //    ItemNameList.Add(BuyThingList[i].name);
-            //}
+            GetObjects go = new GetObjects();
+            //List<G_Buy_Thing> BuyThingList = await go.GetBuyThingObjects(user_id);
+            BuyThingList = await go.GetBuyThingObjects(user_id);
+            for (int i = 0; i < BuyThingList.Count; i++) {
+                ItemNameList.Add(BuyThingList[i].name);
+            }
 
             //Todo:削除する
-            this.ItemNameList.Add("0");//[0]
-            this.ItemNameList.Add("1");//[1]
-            this.ItemNameList.Add("2");//[2]
-            this.ItemNameList.Add("3");
-            this.ItemNameList.Add("4");
-            this.ItemNameList.Add("5");
-
-
+            //this.ItemNameList.Add("0");//[0]
+            //this.ItemNameList.Add("1");//[1]
+            //this.ItemNameList.Add("2");//[2]
+            //this.ItemNameList.Add("3");
+            //this.ItemNameList.Add("4");
+            //this.ItemNameList.Add("5");
 
             itemListView.ItemsSource = ItemNameList;
-
-            //DependencyService.Get<IMyFormsToast>().Show("リストを更新しました！");
         }
 
 
