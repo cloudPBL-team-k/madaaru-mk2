@@ -60,7 +60,7 @@ namespace madaarumk2 {
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     Text = "+",
                     FontSize = 30,
-                    BackgroundColor = Color.Red,
+                    BackgroundColor = Color.Orange,
                     TextColor = Color.White,
                     Command = new Command(async () => { 
                         string scanedJancode = "";
@@ -111,7 +111,7 @@ namespace madaarumk2 {
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     Text = "更新",
                     FontSize = 20,
-                    BackgroundColor = Color.Blue,
+                    BackgroundColor = Color.Tan,
                     TextColor = Color.White,
                     Command = new Command(() => { setBoughtList(); })
                 };

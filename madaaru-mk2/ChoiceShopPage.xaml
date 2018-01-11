@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.ChoiceShopPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="madaarumk2.ChoiceShopPage"
+             BackgroundColor="#EEEEEE">
     <StackLayout>
         <Label>Text="+チェックボックス式で"</Label>
 
@@ -11,7 +14,7 @@
         <Label Text= "ShopC" x:Name="shopCNameLabel"/>
         <Label Text= "ShopD" x:Name="shopDNameLabel"/>
         
-        <Button Text="この店で追加する" Clicked="addScanBtnClicked" BackgroundColor="RED" />
+        <Button Text="この店で追加する" Clicked="addScanBtnClicked" BackgroundColor="orangered" />
 
     </StackLayout>  
 </ContentPage>

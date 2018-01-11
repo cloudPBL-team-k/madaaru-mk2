@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.CompleteBoughtThingPage">
     <StackLayout>
-        <Label>Text="次の行動を選択してもらう"</Label>
-<!--        <Label Text="店名: " x:Name="shopNameLabel" />-->
-        <Label Text="商品名: " x:Name="itemNameLabel" />
-        <Label Text="個数: " x:Name="itemNumLabel" />
+        <BoxView VerticalOptions="EndAndExpand" />
+        <Label Text="商品の名前" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+        <Label Text="" x:Name="itemNameLabel" HorizontalOptions="Center"/>
+        <Label Text="購入個数" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+        <Label Text="" x:Name="itemNumLabel" />
         <Label Text="次の購入予定日: " x:Name="nextBuyDateLabel" />
-        <Button Text="まだ登録する" Clicked="AddOtherOneBtnClicked" BackgroundColor="RED" />
-        <Button Text="登録を終了する" Clicked="FinishBtnClicked" BackgroundColor="RED" />
+        <Button Text="まだ登録する" Clicked="AddOtherOneBtnClicked" BackgroundColor="orangered" />
+        <Button Text="登録を終了する" Clicked="FinishBtnClicked" BackgroundColor="tan" TextColor="white"/>
+        <BoxView VerticalOptions="StartAndExpand" />
     </StackLayout>
 </ContentPage>

@@ -4,12 +4,12 @@
 		<!--        <Label Text="購入したことがある商品"/>-->
 		<ListView x:Name="itemListView"
         Header="購入したことがある商品"
-        SeparatorColor="Red"
+        SeparatorColor="orangered"
         ItemSelected="OnItemSelected"
         IsPullToRefreshEnabled="True"
         Refreshing="RefreshListBtnClicked"
         />
-		<Button Text= "登録する" x:Name="ResistBtn" Clicked="RegistBtnClicked" BackgroundColor="RED" />
+		<Button Text= "登録する" x:Name="ResistBtn" Clicked="RegistBtnClicked" BackgroundColor="orangered" />
 <!--		<Button Text="Refresh List" Clicked="RefreshListBtnClicked" />-->
 	</StackLayout>
 </ContentPage>

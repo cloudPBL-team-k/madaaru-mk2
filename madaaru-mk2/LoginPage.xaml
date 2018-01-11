@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.LoginPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.LoginPage"
+    BackgroundColor="#EEEEEE">
        <StackLayout>
+        <BoxView VerticalOptions="EndAndExpand" />
         <!--Placeholderプロパティでプレースホルダの表示-->
-        <Entry Placeholder = "ユーザ名" x:Name="nameInput"/>
+        <Entry Placeholder = "ユーザ名" x:Name="nameInput" PlaceholderColor="Gray"/>
         <!--IsPasswordプロパティで入力文字を隠す-->
-        <Entry Placeholder="パスワード" Text = "" IsPassword = "true" x:Name="passInput"/>
-        <Button Text="Log-in" TextColor="White" Clicked="LoginBtnClicked" BackgroundColor="Green" />
-        <Button Text="Signup" TextColor="White" Clicked="SignupBtnClicked" BackgroundColor="Navy" />
+        <Entry Placeholder="パスワード" Text = "" IsPassword = "true" x:Name="passInput" PlaceholderColor="Gray"/>
+        <Button Text="Log-in" TextColor="White" Clicked="LoginBtnClicked" BackgroundColor="blue" />
+        <Button Text="Signup" TextColor="White" Clicked="SignupBtnClicked" BackgroundColor="orange" />
+        <BoxView VerticalOptions="StartAndExpand" />
     </StackLayout>
 </ContentPage>

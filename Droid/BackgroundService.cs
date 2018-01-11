@@ -19,7 +19,7 @@ public class BackgroundService : Service {
             while(true) {
                 await Task.Delay(10000);
                 // 開発用。ずっとサーバにアクセスし続けるので一旦何もしないようにする
-                continue;
+                // continue;
 
                 DateTime dt = DateTime.Now;
                 // 毎日AM9:00のみ一度実行
