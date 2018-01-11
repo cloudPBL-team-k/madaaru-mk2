@@ -4,7 +4,7 @@
         <Label>Text="商品の名前"</Label>
         <Label>Text="個数"</Label>
         <Label>Text="ここで確認してもらう"</Label>
-        <Label Text="" x:Name="shopNameLabel" />
+<!--        <Label Text="" x:Name="shopNameLabel" />-->
         <Label Text="" x:Name="itemNameLabel" />
         <Label Text="" x:Name="itemNumLabel" />
         <Button Text="これで登録する" Clicked="OkBtnClicked" BackgroundColor="RED" />

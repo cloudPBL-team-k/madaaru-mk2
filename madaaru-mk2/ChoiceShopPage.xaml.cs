@@ -50,14 +50,6 @@ namespace madaarumk2 {
                     }
                 });
             };
-
-            //DependencyService.Get<IMyFormsToast>().Show("ScanedJancode: " + scanedJancode);
-
-            ////選択した店名をchosenShopNameに入れる
-            //string chosenShopName = shopANameLabel.Text;
-            ////chosenShopName,jancodeを渡す
-            //await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, scanedJancode), true);
-
         }
     }
 }

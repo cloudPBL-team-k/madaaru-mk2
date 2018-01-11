@@ -11,7 +11,7 @@ namespace madaarumk2 {
 
         public BoughtThingConcernPage(SearchedInfo thingInfo, int itemNum, string shopName) {
             InitializeComponent();
-            shopNameLabel.Text = shopName;
+            //shopNameLabel.Text = shopName;
             itemNumLabel.Text = itemNum.ToString();
             itemNameLabel.Text = thingInfo.Name;
             this.item = thingInfo;
