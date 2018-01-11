@@ -13,6 +13,9 @@ namespace madaarumk2 {
 
 
         async void addBtnClicked(object sender, EventArgs s) {
+
+            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
+
             string nextPageResult = await DisplayActionSheet(
                     "追加方法を選ぶ", "閉じる", "キャンセル",
                     new string[] { "リストから", "スキャンする" });

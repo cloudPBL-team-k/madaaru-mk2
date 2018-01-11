@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.DateTimeInputPage">
+    <StackLayout>
+        <Label Text="日付を入力しください: " />
+        <Entry Placeholder="2018" x:Name="yearEntry" />
+        <Entry Placeholder="01" x:Name="monthEntry" />
+        <Entry Placeholder="01" x:Name="dayEntry" />
+        <Button Text="これで登録する" Clicked="OkBtnClicked" BackgroundColor="RED" />
+        <Button Text="キャンセル" Clicked="CancelBtnClicked" BackgroundColor="RED" />
+    </StackLayout>
+</ContentPage>
