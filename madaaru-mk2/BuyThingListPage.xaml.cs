@@ -44,7 +44,7 @@ namespace madaarumk2
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Text = "+",
                 FontSize = 30,
-                BackgroundColor = Color.Red,
+                BackgroundColor = Color.OrangeRed,
                 TextColor = Color.White,
                 Command = new Command(async () => {
                     string nextPageResult = await DisplayActionSheet("追加方法を選ぶ", "閉じる", "キャンセル", new string[] { "リストから", "スキャンする" });
@@ -116,7 +116,7 @@ namespace madaarumk2
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Text = "更新",
                 FontSize = 20,
-                BackgroundColor = Color.Blue,
+                BackgroundColor = Color.Tan,
                 TextColor = Color.White,
                 Command = new Command(() => { setBuyList(); })
             };
