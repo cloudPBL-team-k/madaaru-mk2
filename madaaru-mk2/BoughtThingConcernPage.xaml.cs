@@ -25,7 +25,9 @@ namespace madaarumk2 {
             //購入品情報を作成
             //userIdはLoginが実装でき次第書き換える
             //userIdはとりあえず固定
-            int userId = 1;
+
+            User user = (User)Application.Current.Properties["user"];
+            int userId = user.id;
 
             Bought_thing bt = new Bought_thing();
             //書き換える

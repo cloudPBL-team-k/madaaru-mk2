@@ -27,8 +27,11 @@ namespace madaarumk2 {
 
         //Listを取得してセットする処理を書く
         async Task setBoughtList(){
+            User user = (User)Application.Current.Properties["user"];
+            int userId = user.id;
+
             GetObjects go = new GetObjects();
-            int userId = 1;
+
             string jsonString = await go.GetExpendablesInfo(userId);
 
             if (jsonString != "null"){
