@@ -17,8 +17,9 @@ namespace madaarumk2 {
             InitializeComponent();
 
             //itemListView.ItemsSource = ItemNameList;
-            //呼ばれてない説
             setList();
+            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
+
         }
 
 
@@ -43,6 +44,8 @@ namespace madaarumk2 {
 
         //List更新ボタン
         async void RefreshListBtnClicked(object sender, EventArgs s) {
+            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
+
             await setList();
             this.itemListView.IsRefreshing = false;
         }

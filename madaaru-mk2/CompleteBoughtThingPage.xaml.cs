@@ -10,30 +10,40 @@ namespace madaarumk2 {
             InitializeComponent();
             shopNameLabel.Text = "店名: " + shopName;
             itemNameLabel.Text = "商品名: " + item.Name;
-            //itemNameLabel.Text = "商品名: " + expendable.name;
             itemNumLabel.Text = "個数: " + bt.num;
             nextBuyDateLabel.Text = "次の購入予定日: " + nbd.next_buy_date;
-            //nextBuyDateLabel.Text = "次の購入予定日: " + expendable.limit;
 
             //ここに一定タイマーを仕込む処理を書く
             //CreateNotify();
 
         }
 
-        async Task CreateNotify(){
-            //await CrossNotifications.Current.Send("My Title", "My message for the notification");
+        //async Task CreateNotify(){
+        //}
 
-            await CrossNotifications.Current.Send(new Notification{Title = "Title desu", Message = "I sent this a long time ago", When = TimeSpan.FromSeconds(5)});
+        async void AddOtherOneBtnClicked(object sender, EventArgs s) {
+            if (Device.RuntimePlatform == Device.Android) {
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+            } else {
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
+            }
 
-            //await CrossNotifications.Current.Send("Happy Birthday", "I sent this a long time ago", when = TimeSpan.FromDays(50));
+            await Navigation.PopAsync();
         }
 
-        void AddOtherOneBtnClicked(object sender, EventArgs s){
-            
-        }
-
-        void FinishBtnClicked(object sender, EventArgs s){
-            
+        async void FinishBtnClicked(object sender, EventArgs s) {
+            if (Device.RuntimePlatform == Device.Android) {
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
+            } else {
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 4]);
+            }
+            await Navigation.PopAsync();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace madaarumk2 {
 
         //個数はここで決めてもらう
         async void OkDoneBtnClicked(object sender, EventArgs s) {
+
             //入力した個数を取得
             //thingsNumは個数
             int itemNum = 1;
@@ -28,6 +29,14 @@ namespace madaarumk2 {
                 await DisplayAlert("登録完了", prbt.updated_at.ToString(), "OK");
                 //ページを離れる
 
+            if (Navigation.NavigationStack.Count == 4) {
+                    if (Device.RuntimePlatform == Device.Android) {
+                        Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                    } else {
+                        Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                    }
+                }
+                await Navigation.PopAsync();
 
             } else {//Inputが数字以外
                 //正しい入力を促す
@@ -35,7 +44,17 @@ namespace madaarumk2 {
             }
         }
 
-        void CancelBtnClicked(object sender, EventArgs s){
+        async void CancelBtnClicked(object sender, EventArgs s) {
+            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
+
+            if(Navigation.NavigationStack.Count == 4){
+                if (Device.RuntimePlatform == Device.Android) {
+                    Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                } else {
+                    Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                }
+            }
+            await Navigation.PopAsync();
             //BuyThingListPageまでもどる
         }
     }
