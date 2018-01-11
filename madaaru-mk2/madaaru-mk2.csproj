@@ -152,6 +152,7 @@
     </Compile>
     <Compile Include="G_Buy_Thing.cs" />
     <Compile Include="P_Res_Buy_Thing.cs" />
+    <Compile Include="Buy_thing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Platform">
