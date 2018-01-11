@@ -16,7 +16,7 @@ namespace madaarumk2 {
             itemNameLabel.Text = thingInfo.Name;
             this.item = thingInfo;
             this.itemNum = itemNum;
-            this.shopName = shopName;
+            //this.shopName = shopName;
         }
 
 
@@ -60,7 +60,7 @@ namespace madaarumk2 {
                     await Navigation.PushAsync(new DateTimeInputPage(), true);
 
                     inputDateTime = (DateTime)Application.Current.Properties["inputDateTime"];
-                    DependencyService.Get<IMyFormsToast>().Show("入力した日付: " + inputDateTime.ToString());
+                    //DependencyService.Get<IMyFormsToast>().Show("入力した日付: " + inputDateTime.ToString());
 
 
                     if (inputDateTime.CompareTo(defaultDT) == 0) {//1990-01-01なので入力してくれてない
@@ -80,24 +80,21 @@ namespace madaarumk2 {
                 be.user_id = userId;
                 be.thing_id = item.Id;
                 be.limit = sendDTstring;
-                DependencyService.Get<IMyFormsToast>().Show("登録する日付: " + inputDateTime.ToString("yyyy-MM-dd"));
+
+                //Todo:消す
+                DependencyService.Get<IMyFormsToast>().Show("次のlimitの日付: " + inputDateTime.ToString("yyyy-MM-dd"));
 
                 //be.limit = nextBuyDate.next_buy_date;
                 //Postして消耗品リストに登録
                 Expendables postedEx = await pj.PostExpendablesInfo(be);
 
-                DependencyService.Get<IMyFormsToast>().Show("消耗品リストに登録しました: " + postedEx.created_at);
+                //DependencyService.Get<IMyFormsToast>().Show("消耗品リストに登録しました: " + postedEx.created_at);
 
                 //登録完了したので完了したことを伝えるページに遷移
                 //shopName(店名)、item.Name(商品名)、bt(bt.numで個数)、nextBuyDate(limit)
                 //Page cbtPage = new CompleteBoughtThingPage(shopName, item, bt, nextBuyDate);
                 //await Navigation.PushAsync(cbtPage, true);
                 await Navigation.PushAsync(new CompleteBoughtThingPage(shopName, item, bt, nextBuyDate), true);
-
-
-                //店名、個数(bt.num)、postedEx(商品名、次回購入リミット)を渡して表示する
-                //await Navigation.PushAsync(new CompleteBoughtThingPage(shopName, bt, postedEx), true);
-
             }else{//帰ってきた日付が変換できないエラー
                 DependencyService.Get<IMyFormsToast>().Show("帰ってきた日付を変換できません:" + nextBuyDate.next_buy_date);
                 //Todo:BoughtListPageに戻る処理
