@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Collections.Generic;
-
-
+using System.Diagnostics;
+using System.Linq;
 using Xamarin.Forms;
+using ZXing.Net.Mobile.Forms;
 using System.Threading.Tasks;
 using ZXing.Net.Mobile.Forms;
+
 
 namespace madaarumk2 {
     public partial class BoughtListPage : ContentPage {
@@ -15,24 +17,12 @@ namespace madaarumk2 {
             setBoughtList();
         }
 
-        //void addBtnClicked(object sender, EventArgs s)
-        //{
-        //    Navigation.PushAsync(new ChoiceShopPage(), true);
-        //}
-
-        ////List更新ボタン
-        //async void RefreshListBtnClicked(object sender, EventArgs s)
-        //{
-        //    await setBoughtList();
-        //}
-
         //Listを取得してセットする処理を書く
         async Task setBoughtList(){
             User user = (User)Application.Current.Properties["user"];
             int userId = user.id;
 
             GetObjects go = new GetObjects();
-
             string jsonString = await go.GetExpendablesInfo(userId);
 
             if (jsonString != "null"){
@@ -52,6 +42,7 @@ namespace madaarumk2 {
                 cell.SetBinding(ImageCell.DetailProperty, "Value");  
                
                 var listView = new ListView{
+                    IsPullToRefreshEnabled = true,
                     ItemsSource = item,
                     ItemTemplate = cell
                 };
@@ -105,6 +96,11 @@ namespace madaarumk2 {
                             });
                         };
                     })
+                };
+
+                listView.Refreshing += (sender, e) =>{
+                    setBoughtList();
+                    listView.IsRefreshing = false;
                 };
 
                 var RefreshList = new Button{
