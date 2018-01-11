@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Collections.Generic;
-
-
+using System.Diagnostics;
+using System.Linq;
 using Xamarin.Forms;
+using ZXing.Net.Mobile.Forms;
 using System.Threading.Tasks;
+
 
 namespace madaarumk2 {
     public partial class BoughtListPage : ContentPage {
@@ -38,6 +39,7 @@ namespace madaarumk2 {
                 cell.SetBinding(ImageCell.DetailProperty, "Value");  
                
                 var listView = new ListView{
+                    IsPullToRefreshEnabled = true,
                     ItemsSource = item,
                     ItemTemplate = cell
                 };
@@ -49,6 +51,11 @@ namespace madaarumk2 {
                     BackgroundColor = Color.Red,
                     TextColor = Color.White,
                     Command = new Command(() => { Navigation.PushAsync(new ChoiceShopPage(), true); })
+                };
+
+                listView.Refreshing += (sender, e) =>{
+                    setBoughtList();
+                    listView.IsRefreshing = false;
                 };
 
                 var RefreshList = new Button{

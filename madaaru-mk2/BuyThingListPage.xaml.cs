@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 using Xamarin.Forms;
 using ZXing.Net.Mobile.Forms;
@@ -28,6 +29,7 @@ namespace madaarumk2 {
             cell.SetBinding(ImageCell.DetailProperty, "Value");
 
             var listView = new ListView{
+                IsPullToRefreshEnabled = true,
                 ItemsSource = item,
                 ItemTemplate = cell
             };
@@ -88,6 +90,11 @@ namespace madaarumk2 {
                         }
                     })
                 };
+
+            listView.Refreshing += (sender, e) =>{
+                setBuyList();
+                listView.IsRefreshing = false;
+            };
 
             var RefreshList = new Button{
                 HorizontalOptions = LayoutOptions.FillAndExpand,

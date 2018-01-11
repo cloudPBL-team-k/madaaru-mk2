@@ -43,7 +43,7 @@ namespace madaarumk2 {
 
         public async Task<string> GetBuythingInfo(int user_id){
             string serverUrl = ServerInfo.url;
-            string searchAPIUrl = "/buy_thing";
+            string searchAPIUrl = "/buy_things";
             string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
 
             WrappedHttpClient whc = new WrappedHttpClient();
