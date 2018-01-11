@@ -71,9 +71,6 @@ namespace madaarumk2 {
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await whc.PostAsync(reqUrl, content);
             string result = await response.Content.ReadAsStringAsync();
-
-            DependencyService.Get<IMyFormsToast>().Show(result);
-
             P_Res_Buy_Thing prbt = JsonConvert.DeserializeObject<P_Res_Buy_Thing>(result);
             return prbt;
         }

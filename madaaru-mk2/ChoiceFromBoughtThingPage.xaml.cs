@@ -6,16 +6,13 @@ using Xamarin.Forms;
 
 namespace madaarumk2 {
     public partial class ChoiceFromBoughtThingPage : ContentPage {
-        //public List<string> ItemNameList { get; set; } = Enumerable.Range(1, 5)
-        //.Select((x, index) => $"{index}番目")
-        //.ToList();
+
         public List<string> ItemNameList = new List<string>();
         List<G_Buy_Thing> BuyThingList = new List<G_Buy_Thing>();
         int chosenNum = -1;
 
         public ChoiceFromBoughtThingPage() {
             InitializeComponent();
-            //itemListView.ItemsSource = ItemNameList;
             setList();
         }
 
@@ -28,9 +25,7 @@ namespace madaarumk2 {
             bt.num = 1;
 
             if (chosenNum != -1) {
-                // Todo:コメントアウトを変える
                 bt.thing_id = BuyThingList[chosenNum].thing_id;
-                //bt.thing_id = chosenNum;
 
                 //登録に必要な情報を渡す
                 Navigation.PushAsync(new ConcernBuyThingPage(bt), true);
@@ -58,24 +53,11 @@ namespace madaarumk2 {
             int user_id = userInfo.id;
 
             GetObjects go = new GetObjects();
-            //List<G_Buy_Thing> BuyThingList = await go.GetBuyThingObjects(user_id);
             BuyThingList = await go.GetBuyThingObjects(user_id);
             for (int i = 0; i < BuyThingList.Count; i++) {
                 ItemNameList.Add(BuyThingList[i].name);
             }
-
-            //Todo:削除する
-            //this.ItemNameList.Add("0");//[0]
-            //this.ItemNameList.Add("1");//[1]
-            //this.ItemNameList.Add("2");//[2]
-            //this.ItemNameList.Add("3");
-            //this.ItemNameList.Add("4");
-            //this.ItemNameList.Add("5");
-
             itemListView.ItemsSource = ItemNameList;
         }
-
-
-
     }
 }
