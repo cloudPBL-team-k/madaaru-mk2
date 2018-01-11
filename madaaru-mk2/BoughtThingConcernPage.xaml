@@ -2,8 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtThingConcernPage">
     <StackLayout>
         <BoxView VerticalOptions="EndAndExpand" />
-        <Label Text="購入店舗" HorizontalOptions="Center" FontAttributes="Bold"></Label>
-        <Label Text="" x:Name="shopNameLabel" HorizontalOptions="Center"/>
         <Label Text="商品の名前" HorizontalOptions="Center" FontAttributes="Bold"></Label>
         <Label Text="" x:Name="itemNameLabel" HorizontalOptions="Center"/>
         <Label Text="購入個数" HorizontalOptions="Center" FontAttributes="Bold"></Label>

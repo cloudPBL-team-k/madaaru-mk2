@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using ZXing.Net.Mobile.Forms;
 
 namespace madaarumk2 {
     public partial class BoughtListPage : ContentPage {
@@ -27,8 +28,11 @@ namespace madaarumk2 {
 
         //Listを取得してセットする処理を書く
         async Task setBoughtList(){
+            User user = (User)Application.Current.Properties["user"];
+            int userId = user.id;
+
             GetObjects go = new GetObjects();
-            int userId = 1;
+
             string jsonString = await go.GetExpendablesInfo(userId);
 
             if (jsonString != "null"){
@@ -58,7 +62,49 @@ namespace madaarumk2 {
                     FontSize = 30,
                     BackgroundColor = Color.Orange,
                     TextColor = Color.White,
-                    Command = new Command(() => { Navigation.PushAsync(new ChoiceShopPage(), true); })
+                    Command = new Command(async () => { 
+                        string scanedJancode = "";
+
+                        var scanPage = new ZXingScannerPage() {
+                            DefaultOverlayTopText = "バーコードを読み取ります",
+                            DefaultOverlayBottomText = "",
+                        };
+                        await Navigation.PushAsync(scanPage);
+                        scanPage.OnScanResult += (result) => {
+                            scanPage.IsScanning = false;
+                            Device.BeginInvokeOnMainThread(async () => {
+                                scanedJancode = result.Text;
+                                await Navigation.PopAsync();
+
+                                //選択した店名をchosenShopNameに入れる
+                                string chosenShopName = "ShopA";
+
+                                //DependencyService.Get<IMyFormsToast>().Show("Jancode: " + scanedJancode + "で問い合わせ中");
+
+                                //jancodeを元にサーバに商品情報を取得
+                                //GetObjects go = new GetObjects();
+                                string jsonString2 = await go.GetItemJsonString(scanedJancode);
+
+                                DependencyService.Get<IMyFormsToast>().Show("Json: " + jsonString2);
+
+                                if (jsonString2 != null) {//jsonの内容をチェック
+                                                            //SearchedInfo thingInfo = new SearchedInfo();
+                                    SearchedInfo thingInfo = go.GetItemObjectFromJson(jsonString2);
+
+                                    //chosenShopName,SearchedInfoを渡す
+                                    await Navigation.PushAsync(new BoughtThingResultEditPage(chosenShopName, thingInfo), true);
+                                } else {//jancode is null
+                                    DependencyService.Get<IMyFormsToast>().Show("サーバにデータがありません");
+                                    //DependencyService.Get<IMyFormsToast>().Show("サーバにデータがありません。商品名を手入力してください");
+                                    //できればdisplayactionsheetで再スキャンか
+                                    //入力画面に移行するかを選べるようにする
+
+                                    //手入力画面に移行する.手入力ページが未実装なのでコメントアウト
+                                    //await Navigation.PushAsync(new ManualInputBoughtThingPage(), true);
+                                }
+                            });
+                        };
+                    })
                 };
 
                 var RefreshList = new Button{

@@ -8,7 +8,7 @@ namespace madaarumk2 {
     public partial class CompleteBoughtThingPage : ContentPage {
         public CompleteBoughtThingPage(string shopName, SearchedInfo item, Bought_thing bt, Next_buy_date nbd) {
             InitializeComponent();
-            shopNameLabel.Text = "店名: " + shopName;
+            //shopNameLabel.Text = "店名: " + shopName;
             itemNameLabel.Text = "商品名: " + item.Name;
             itemNumLabel.Text = "個数: " + bt.num;
             nextBuyDateLabel.Text = "次の購入予定日: " + nbd.next_buy_date;
@@ -24,10 +24,10 @@ namespace madaarumk2 {
         async void AddOtherOneBtnClicked(object sender, EventArgs s) {
             if (Device.RuntimePlatform == Device.Android) {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
-                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
             } else {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
-                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
+                //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
             }
 
             await Navigation.PopAsync();
@@ -37,11 +37,11 @@ namespace madaarumk2 {
             if (Device.RuntimePlatform == Device.Android) {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
-                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
+                //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
             } else {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
-                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 4]);
+                //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 4]);
             }
             await Navigation.PopAsync();
         }
