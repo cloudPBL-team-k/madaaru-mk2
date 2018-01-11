@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.ConcernBuyThingPage">
     <StackLayout>
+        <BoxView VerticalOptions="EndAndExpand" />
         <Label Text="個数を入力してください" HorizontalOptions="Center" FontAttributes="Bold"/>
         <Entry Text="1" x:Name="numInput" />
         <Button Text="登録する" Clicked="OkDoneBtnClicked" BackgroundColor="orangered"/>
         <Button Text="キャンセル" Clicked="CancelBtnClicked" BackgroundColor="tan" TextColor="white"/>
+        <BoxView VerticalOptions="StartAndExpand" />
     </StackLayout>
 </ContentPage>

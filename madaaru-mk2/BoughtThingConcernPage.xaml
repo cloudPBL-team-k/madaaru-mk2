@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtThingConcernPage">
     <StackLayout>
+        <BoxView VerticalOptions="EndAndExpand" />
         <Label Text="購入店舗" HorizontalOptions="Center" FontAttributes="Bold"></Label>
         <Label Text="" x:Name="shopNameLabel" HorizontalOptions="Center"/>
         <Label Text="商品の名前" HorizontalOptions="Center" FontAttributes="Bold"></Label>
@@ -9,5 +10,6 @@
         <Label Text="" x:Name="itemNumLabel" HorizontalOptions="Center"/>
         <Button Text="これで登録する" Clicked="OkBtnClicked" BackgroundColor="orangered" />
         <Button Text="内容を訂正する" Clicked="EditAgainBtnClicked" BackgroundColor="tan" TextColor="White"/>
+        <BoxView VerticalOptions="StartAndExpand" />
     </StackLayout>
 </ContentPage>

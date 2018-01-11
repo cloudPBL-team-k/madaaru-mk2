@@ -8,9 +8,10 @@
     NavigationPage.HasNavigationBar="false">
     <StackLayout>
         <BoxView VerticalOptions="EndAndExpand" />
-        <Button Text="買ったものリスト" Clicked="BoughtListbtnClicked" VerticalOptions="CenterAndExpand" BackgroundColor="darkorange" TextColor="White"/>
-        <Button Text="買うものリスト" Clicked="BuyThingListbtnClicked" VerticalOptions="CenterAndExpand" BackgroundColor="darkorange" TextColor="White"/>
-        <Button Text="パーミッション" Clicked="NotifyPermissionbtnClicked" VerticalOptions="CenterAndExpand" BackgroundColor="darkorange" TextColor="White"/>
+        <Button Text="買ったものリスト" Clicked="BoughtListbtnClicked" VerticalOptions="FillAndExpand" BackgroundColor="darkorange" TextColor="White" FontSize="25" />
+        <BoxView VerticalOptions="FillAndExpand" />
+        <Button Text="買うものリスト" Clicked="BuyThingListbtnClicked" VerticalOptions="FillAndExpand" BackgroundColor="darkorange" TextColor="White" FontSize="25" />
+        <Button Text="パーミッション" Clicked="NotifyPermissionbtnClicked" VerticalOptions="CenterAndExpand" BackgroundColor="orangered" TextColor="White"/>
         <Button Text="Develop Pageへ" Clicked="DevPagebtnClicked" VerticalOptions="CenterAndExpand" BackgroundColor="orangered" TextColor="White"/>
         <BoxView VerticalOptions="StartAndExpand" />
     </StackLayout>

@@ -5,12 +5,14 @@
              BackgroundColor="#EEEEEE">
     <ContentPage.Content>
         <StackLayout>
+            <BoxView VerticalOptions="EndAndExpand" />
             <!--Placeholderプロパティでプレースホルダの表示-->
             <Entry Placeholder = "ユーザ名" x:Name="nameInput" PlaceholderColor="Gray"/>
             <!--IsPasswordプロパティで入力文字を隠す-->
             <Entry Placeholder ="パスワード" Text = "" IsPassword = "true" x:Name="passInput" PlaceholderColor="Gray"/>
             <Entry Placeholder ="パスワードを再入力" Text = "" IsPassword = "true" x:Name="passInput2" PlaceholderColor="Gray"/>
             <Button Text="Sign-Up" Clicked="SignupBtnClicked" BackgroundColor="Orange" />
+            <BoxView VerticalOptions="StartAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
