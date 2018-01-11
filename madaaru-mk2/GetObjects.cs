@@ -31,22 +31,26 @@ namespace madaarumk2 {
             return thingInfo;
         }
 
-        public List<Expendables> GetAllItemsObjectFromJson(string jsonString) {
+        public List<Expendables> GetAllItemsObjectFromJson(string jsonString){
             List<Expendables> expendablesInfo = JsonConvert.DeserializeObject<List<Expendables>>(jsonString);
             return expendablesInfo;
         }
 
-        //public async Task<List<Bought_things>> GetAllItemsInfo(int user_id)
-        //{
-        //    string serverUrl = ServerInfo.url;
-        //    string searchAPIUrl = "/bought_things";
-        //    string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
+        public List<Buy_thing> GetbuythingObjectFromJson(string jsonString){
+            List<Buy_thing> buythingInfo = JsonConvert.DeserializeObject<List<Buy_thing>>(jsonString);
+            return buythingInfo;
+        }
 
-        //    HttpClient whc = new HttpClient();
-        //    string jsonString = await whc.GetStringAsync(reqUrl);
-        //    List<Bought_things> thingsInfo = JsonConvert.DeserializeObject<List<Bought_things>>(jsonString);
-        //    return thingsInfo;
-        //}
+        public async Task<string> GetBuythingInfo(int user_id){
+            string serverUrl = ServerInfo.url;
+            string searchAPIUrl = "/buy_thing";
+            string reqUrl = $"{serverUrl}{searchAPIUrl}?user_id={user_id}";
+
+            WrappedHttpClient whc = new WrappedHttpClient();
+
+            string jsonString = await whc.GetStringAsync(reqUrl);
+            return jsonString;
+        }
 
         public async Task<string> GetExpendablesInfo(int user_id) {
             string serverUrl = ServerInfo.url;

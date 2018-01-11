@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 
@@ -15,24 +15,12 @@ namespace madaarumk2 {
             setBoughtList();
         }
 
-        //void addBtnClicked(object sender, EventArgs s)
-        //{
-        //    Navigation.PushAsync(new ChoiceShopPage(), true);
-        //}
-
-        ////List更新ボタン
-        //async void RefreshListBtnClicked(object sender, EventArgs s)
-        //{
-        //    await setBoughtList();
-        //}
-
         //Listを取得してセットする処理を書く
         async Task setBoughtList(){
             User user = (User)Application.Current.Properties["user"];
             int userId = user.id;
 
             GetObjects go = new GetObjects();
-
             string jsonString = await go.GetExpendablesInfo(userId);
 
             if (jsonString != "null"){
