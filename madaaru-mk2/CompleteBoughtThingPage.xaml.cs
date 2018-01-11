@@ -24,9 +24,11 @@ namespace madaarumk2 {
         async void AddOtherOneBtnClicked(object sender, EventArgs s) {
             if (Device.RuntimePlatform == Device.Android) {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 1]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
                 //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
             } else {
                 Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+                Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
                 //Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 3]);
             }
 
