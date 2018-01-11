@@ -35,7 +35,7 @@ namespace madaarumk2 {
 
 
         void CancelBtnClicked(object sender, EventArgs s){
-            Navigation.PopModalAsync();    
+            Navigation.PopAsync();    
         }
     }
 }
