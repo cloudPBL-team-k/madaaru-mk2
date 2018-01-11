@@ -15,11 +15,8 @@ namespace madaarumk2 {
 
         public ChoiceFromBoughtThingPage() {
             InitializeComponent();
-
             //itemListView.ItemsSource = ItemNameList;
             setList();
-            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
-
         }
 
 
@@ -30,33 +27,30 @@ namespace madaarumk2 {
             //リストから選択してもらった物の数とthing_idを取得
             bt.num = 1;
 
-            if(chosenNum != -1){
+            if (chosenNum != -1) {
                 // Todo:コメントアウトを変える
                 //bt.thing_id = BuyThingList[chosenNum].thing_id;
                 bt.thing_id = chosenNum;
 
                 //登録に必要な情報を渡す
-                Navigation.PushAsync(new ConcernBuyThingPage(bt), true); 
-            }else{//chosenNum == -1 なので選択されていない
+                Navigation.PushAsync(new ConcernBuyThingPage(bt), true);
+            } else {//chosenNum == -1 なので選択されていない
                 DependencyService.Get<IMyFormsToast>().Show("商品を選択してください");
             }
         }
 
         //List更新ボタン
         async void RefreshListBtnClicked(object sender, EventArgs s) {
-            DependencyService.Get<IMyFormsToast>().Show("NavigationStuck :" + Navigation.NavigationStack.Count);
-
             await setList();
             this.itemListView.IsRefreshing = false;
         }
 
-        void OnItemSelected(object sender, SelectedItemChangedEventArgs s){
-            ResistBtn.Text = s.SelectedItem.ToString() +"を登録する";
-
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs s) {
+            ResistBtn.Text = s.SelectedItem.ToString() + "を登録する";
             var index = (itemListView.ItemsSource as List<string>).IndexOf(s.SelectedItem as string);
             chosenNum = index;
             //Todo:消す
-            DependencyService.Get<IMyFormsToast>().Show("選択された数は" + index);
+            //DependencyService.Get<IMyFormsToast>().Show("選択された数は" + index);
         }
 
 
@@ -84,7 +78,6 @@ namespace madaarumk2 {
             this.ItemNameList.Add("4");
             this.ItemNameList.Add("5");
 
-            DependencyService.Get<IMyFormsToast>().Show("[1]の数は" + this.ItemNameList[1]);
 
 
             itemListView.ItemsSource = ItemNameList;

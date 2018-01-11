@@ -73,7 +73,7 @@ namespace madaarumk2 {
                                 //GetObjects go = new GetObjects();
                                 string jsonString2 = await go.GetItemJsonString(scanedJancode);
 
-                                DependencyService.Get<IMyFormsToast>().Show("Json: " + jsonString2);
+                                //DependencyService.Get<IMyFormsToast>().Show("Json: " + jsonString2);
 
                                 if (jsonString2 != null) {//jsonの内容をチェック
                                                             //SearchedInfo thingInfo = new SearchedInfo();

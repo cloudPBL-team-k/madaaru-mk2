@@ -28,7 +28,7 @@ namespace madaarumk2 {
                     //選択した店名をchosenShopNameに入れる
                     string chosenShopName = shopANameLabel.Text;
 
-                    DependencyService.Get<IMyFormsToast>().Show("Jancode: " + scanedJancode + "で問い合わせ中");
+                    //DependencyService.Get<IMyFormsToast>().Show("Jancode: " + scanedJancode + "で問い合わせ中");
 
                     //jancodeを元にサーバに商品情報を取得
                     GetObjects go = new GetObjects();

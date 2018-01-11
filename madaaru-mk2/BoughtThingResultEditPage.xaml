@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="madaarumk2.BoughtThingResultEditPage">
     <StackLayout>
         <BoxView VerticalOptions="EndAndExpand" />
-        <Label HorizontalOptions="Center" Text="商品を購入した店舗" FontAttributes="Bold"></Label>
-        <Label Text="店名" x:Name="shopNameLabel" HorizontalOptions="Center"/>
-        <Label Text="商品の名前" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+<!--        <Label HorizontalOptions="Center" Text="商品を購入した店舗" FontAttributes="Bold"></Label>-->
+<!--        <Label Text="店名" x:Name="shopNameLabel" HorizontalOptions="Center"/>
+-->        <Label Text="商品の名前" HorizontalOptions="Center" FontAttributes="Bold"></Label>
         <Label Text="商品名読み込み中..." x:Name="itemNameLabel" HorizontalOptions="Center"/>
         <Label Text="個数入力" HorizontalOptions="Center" FontAttributes="Bold"></Label>
         <Entry Text="1" x:Name="numInput" HorizontalOptions="Center"/>

@@ -11,9 +11,11 @@ namespace madaarumk2 {
         public BoughtThingResultEditPage(string shopName, SearchedInfo thingInfo) {
             InitializeComponent();
             //this.shopName = " 選択された店名:" + shopName; 
-            itemNameLabel.Text = thingInfo.Name;
-            shopNameLabel.Text = shopName;
-            this.shopName = shopName;
+            if (thingInfo.Name != null) {
+                itemNameLabel.Text = thingInfo.Name;
+            }
+            //shopNameLabel.Text = shopName;
+            //this.shopName = shopName;
             this.thingInfo = thingInfo;
         }
 

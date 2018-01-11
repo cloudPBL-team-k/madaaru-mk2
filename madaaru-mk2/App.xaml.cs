@@ -20,6 +20,10 @@ namespace madaarumk2 {
             //});
             //async () => { var result = await CrossNotifications.Current.RequestPermission(); }
 
+            //bool IsInputDateDone = false;
+            //Application.Current.Properties["IsinputDateDone"] = IsInputDateDone;
+
+
             //通知設定をiOSに登録
             DependencyService.Get<INotificationService>().Regist();
 

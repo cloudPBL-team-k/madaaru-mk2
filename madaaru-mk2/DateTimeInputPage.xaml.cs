@@ -31,6 +31,8 @@ namespace madaarumk2 {
                 if (int.TryParse(monthEntry.Text, out month)) {//数値に変換できた場合yearに入る
                     if (int.TryParse(dayEntry.Text, out day)) {//数値に変換できた場合yearに入る
                         Application.Current.Properties["inputDateTime"] = new DateTime(year,month,day);
+                        await Application.Current.SavePropertiesAsync();
+                        //Application.Current.Properties["IsinputDateDone"] = IsInputDateDone;
 
                         //DependencyService.Get<IMyFormsToast>().Show("");
                         //戻る
